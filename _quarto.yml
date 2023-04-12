@@ -1,0 +1,46 @@
+project:
+  type: book
+
+book:
+  title: "1期ゼミ資料"
+  author: 
+  - name: "佐久間 智広"
+    affiliation: "Kobe University"
+    email: "sakuma@port.kobe-u.ac.jp"
+  date: 2023/04/11
+  date-format: YYYY/MM/DD
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+  revealjs:
+    width: 1280
+    height: 1024
+    slide-number: true
+    preview-links: auto
+    logo: kobe.png
+    css: logo.css
+    footer: "ゼミ"
+    smaller: false
+    scrollable: true
+    theme: [white,fonts.scss]
+    fig-cap-location: bottom
+    tbl-cap-location: top
+    embed-resources: false
+    number-sections: true
+    chalkboard: true
+    number-depth: 2
+    toc: true
+    toc-depth: 1
+    navigation-mode: vertical
+editor: visual
+
