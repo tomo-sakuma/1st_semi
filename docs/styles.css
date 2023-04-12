@@ -1,0 +1,9 @@
+.reveal .slide-logo {
+  height: 50px !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
+
+.reveal .callout.callout-style-default div.callout-body {
+ 	  font-size: 1.2em;
+}

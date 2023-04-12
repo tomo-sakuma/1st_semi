@@ -2,6 +2,8 @@
 title: "分析環境の構築"
 ---
 
+[スライド](https://tomo-sakuma.github.io/1期_slides/2_分析環境の構築.html)
+
 ## Rについて
 
 ### Rとは
