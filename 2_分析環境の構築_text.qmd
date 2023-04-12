@@ -1,8 +1,10 @@
 ---
 title: "分析環境の構築"
+date: 2023/04/18
+date-format: YYYY/MM/DD
 ---
 
-[スライド](https://tomo-sakuma.github.io/1期_slides/2_分析環境の構築.html)
+[スライド](https://tomo-sakuma.github.io/1st_semi/1期_slides/2_分析環境の構築.html)
 
 ## Rについて
 

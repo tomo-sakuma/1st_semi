@@ -1,9 +1,3 @@
-# Preface {.unnumbered}
+# 佐久間ゼミ資料 {.unnumbered}
 
-This is a Quarto book.
-
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
-
-```{r}
-1 + 1
-```
+佐久間からのお知らせ，説明資料はここに書き足していきます。

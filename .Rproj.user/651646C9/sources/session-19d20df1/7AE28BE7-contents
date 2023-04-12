@@ -13,7 +13,7 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - summary.qmd
+    - 2_分析環境の構築_text.qmd
     - references.qmd
 
 bibliography: references.bib
