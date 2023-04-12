@@ -1,0 +1,40 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&family=JetBrains+Mono:ital,wght@0,300;0,600;1,300;1,600&family=Figtree:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+// fonts
+$font-family-sans-serif: 'Figtree','IBM Plex Sans','LINE Seed JP_OTF','IBM Plex Sans JP', sans-serif !default;
+$font-family-monospace: 'JetBrains Mono', monospace !default;
+
+$presentation-font-size-root: 32px;
+$body-color:#1A5C71;
+$link-color: #1b89ab;
+$presentation-h1-font-size: 2em;
+$presentation-h2-font-size: 1.6em;
+$presentation-h3-font-size: 1.2em;
+$code-block-font-size: 0.8em;
+
+/*-- scss:rules --*/
+
+.reveal .footer {
+    color: #1A5C71 !important;
+};
+
+.reveal .slide aside .aside-footnotes {
+    color: #1A5C71 !important;
+};
+
+
+.reveal .header {
+    position: absolute ;
+    top: 0.3em;
+    left: 1em;
+    font-size: 1rem;
+    color: $presentation-heading-color;
+    font-family: $presentation-heading-font;
+
+};
+
+.reveal .slides {
+  margin-top: 0.3em;
+};

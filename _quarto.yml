@@ -20,6 +20,14 @@ bibliography: references.bib
 format:
   html:
     theme: cosmo
+    toc: true
+    toc-location: left
+    toc-title: Contents
+    number-sections: true
+    number-depth: 3
+    title-block-banner: true
+    logo: kobe.png
+    embed-resources: true
   pdf:
     documentclass: scrreprt
   revealjs:

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>分析環境の構築</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="2_分析環境の構築_text_files/libs/clipboard/clipboard.min.js"></script>
+<script src="2_分析環境の構築_text_files/libs/quarto-html/quarto.js"></script>
+<script src="2_分析環境の構築_text_files/libs/quarto-html/popper.min.js"></script>
+<script src="2_分析環境の構築_text_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="2_分析環境の構築_text_files/libs/quarto-html/anchor.min.js"></script>
+<link href="2_分析環境の構築_text_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="2_分析環境の構築_text_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="2_分析環境の構築_text_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="2_分析環境の構築_text_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="2_分析環境の構築_text_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">分析環境の構築</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="rについて" class="level2">
+<h2 class="anchored" data-anchor-id="rについて">Rについて</h2>
+<section id="rとは" class="level3">
+<h3 class="anchored" data-anchor-id="rとは">Rとは</h3>
+<p>Rは，統計分析に強みを持つコンピュータ言語です（統計ソフトと呼ぶこともあるけど，厳密な違いはよくわかりません）。</p>
+</section>
+<section id="他のソフト方法との比較" class="level3">
+<h3 class="anchored" data-anchor-id="他のソフト方法との比較">他のソフト・方法との比較</h3>
+<p>エクセルでもある程度の分析はできますが，覚えさえすればエクセルよりもはるかに簡単です。また，エクセルでできる分析は限られていますが，Rではそれよりもはるかに高度なことができます。また，エクセルはそもそも表計算ソフトです。データが簡単にいじれてしまう（書き換えられてしまう）状態で分析作業をするのは好ましくありません。</p>
+<p>なんといってもフリーです。個人のコンピューター（職場が許すのであれば職場のコンピューターにも）にダウンロードすれば，卒業後も使えます。対してIBM社のSPSSは非常に高額です。研究者にでもならない限り個人で購入することはないでしょうし，職場で予算を取ることも難しいかもしれません。</p>
+<p>機械学習との絡みでPythonが流行ってきています。ただ，統計分析に関してはRに一日の長があるという印象です。Pythonはなんでも出来るけど，統計分析部分の操作性・拡張性はRの方が良さそう。</p>
+<p>コンピュータ言語のとっかかりはRでも，Rを使えるようになったらPythonもそこまで負担なく覚えられるでしょう。</p>
+<p><img src="images/paste-500C5DF1.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="rstudio">Rstudio</h2>
+<p>Posit社の提供する統合開発環境（IDE）。RはそれだけだとWindowsのconsoleとか，Macのterminalみたいな，コマンドだけの画面</p>
+<p><img src="images/Screenshot%202022-11-27%20at%2016.45.48.png" class="img-fluid"></p>
+<p>これで使えないわけでもなけれど，もっと使いやすい方が良い。Rをもっと使いやすい状態にしてくれるアプリがRstudioです。</p>
+<ul>
+<li><p>Rの画面（左下）</p></li>
+<li><p>Rのプログラムを書くスペース（左上）</p></li>
+<li><p>読み込んだデータや，過去に実行したコマンドが見れるスペース（右上）</p></li>
+<li><p>パッケージやファイル，作った図表などがみれるスペース（右下）</p></li>
+</ul>
+<p><img src="images/Screenshot%202022-11-27%20at%2016.48.01.png" class="img-fluid"></p>
+<ul>
+<li><p>Rstudioを使うと，分析結果レポートを文書やプレゼン用スライドに直接書き出すこともできます。</p>
+<ul>
+<li>いまこの資料もRstudioで書いています。</li>
+</ul></li>
+<li><p>文献リストの挿入などの機能も実装できるので，その気になればデータ分析から論文執筆まで全てRstudioでできます。</p></li>
+</ul>
+<p>Google colabなど，他の開発環境もありますが，インストールさえしてしまえば，Rstudioの方が便利だと思います。</p>
+</section>
+<section id="rとrstudioのインストール" class="level2">
+<h2 class="anchored" data-anchor-id="rとrstudioのインストール">RとRstudioのインストール</h2>
+<section id="rのインストール" class="level3">
+<h3 class="anchored" data-anchor-id="rのインストール">Rのインストール</h3>
+<ol type="1">
+<li>R の公式サイトに行く<a href="https://cloud.r-project.org" class="uri">https://cloud.r-project.org</a></li>
+<li>自分のOSに合ったものを選択
+<ul>
+<li><p>Windowsなら <code>Download R for Windows</code></p>
+<ul>
+<li>Base を選ぶ</li>
+</ul></li>
+<li><p>Macなら<code>Download R for macOS</code></p>
+<ul>
+<li>Sliconなら<code>R-X.X.X-arm64.pkg</code>，<code>IntelならR-X.X.X.pkg</code></li>
+</ul></li>
+</ul></li>
+<li>ダウンロードしたものを実行してインストール</li>
+</ol>
+</section>
+<section id="rstudioのインストール" class="level3">
+<h3 class="anchored" data-anchor-id="rstudioのインストール">Rstudioのインストール</h3>
+<ol type="1">
+<li>RStudio の公式サイトに行く<a href="https://posit.co/products/open-source/rstudio/" class="uri">https://posit.co/products/open-source/rstudio/</a></li>
+<li>無料版（Open Source Edition）を選択</li>
+<li>自分のOSに合ったものを選んでダウンロード</li>
+<li>ダウンロードしたものを実行してインストール</li>
+</ol>
+<p>X.X.X という部分はバージョン番号です。</p>
+</section>
+</section>
+<section id="rの操作" class="level2">
+<h2 class="anchored" data-anchor-id="rの操作">Rの操作</h2>
+<section id="スクリプトファイル" class="level3">
+<h3 class="anchored" data-anchor-id="スクリプトファイル">スクリプトファイル</h3>
+<p>Rなどの統計ソフトを使う利点の一つは，再現性です。例えばエクセルでは，どんな順番にどんな処理をしたのかは記録されません。Rなどのプログラミングソフトを使うと，操作した内容と順番をコードの形で記録しておけます。コードを記録したファイルを「<strong>スクリプトファイル</strong>」と言います。</p>
+<p>スクリプトファイルは，画面左上にある緑の「＋」アイコンを押して，「R Script」を選択することで新規作成できます。</p>
+<p><img src="images/Screenshot%202022-11-27%20at%2017.27.05.png" class="img-fluid"></p>
+<p>スクリプトファイルを作成すると（初期状態では）画面の左上に白紙のファイルが出てきます。ここにコマンドを打ち込んでいきます。例えば以下のコマンドを打つと，画面の左下にあるRの画面に実行結果が出ます。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<p>左下の画面（console）に直接 <code>1+1</code> と打ち込んでも同じ結果が出ますが，後で記録に残らないので，コードはスクリプト画面に書く，左下は結果の表示だけ，と使い分けた方が良いです。</p>
+<p><img src="images/Screenshot%202022-11-27%20at%2017.27.34.png" class="img-fluid"></p>
+</section>
+<section id="課題" class="level3">
+<h3 class="anchored" data-anchor-id="課題">課題</h3>
+<p>Rスクリプトに以下の内容を打ち込んでください。スクリプト右上の<em>Run</em>ボタンを押すか，<code>Control + Enter</code> (Macの場合は<code>⌘+Enter</code>)で実行してください。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">+</span><span class="dv">3</span> <span class="co">#足し算</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">*</span><span class="dv">4</span> <span class="co">#掛け算</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#変数を先に定義して，計算。printで表示</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">3</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="dv">5</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>z <span class="ot">=</span> x <span class="sc">*</span> y</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(z)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 15</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="rプログラミングの基礎" class="level2">
+<h2 class="anchored" data-anchor-id="rプログラミングの基礎">Rプログラミングの基礎</h2>
+<p>このパートは森知晴先生（立命館大学総合心理学部）のサイト (<a href="https://tomoecon.github.io/R_for_graduate_thesis/">卒業論文のためのR入門</a>) 及び今井耕介先生（Harvard University / 東京大学）の著書 (<a href="https://www.amazon.co.jp/社会科学のためのデータ分析入門-上-今井-耕介/dp/400061245X/ref=sr_1_1?adgrpid=54784895673&amp;gclid=Cj0KCQiAsoycBhC6ARIsAPPbeLtObkhBeqit6O7Sj3q8D_1rpHAI9W9AMQGvb1vkBj_Hx92oiJMxrAoaAp4OEALw_wcB&amp;hvadid=611396736239&amp;hvdev=c&amp;hvlocphy=1009565&amp;hvnetw=g&amp;hvqmt=e&amp;hvrand=10303375646734173109&amp;hvtargid=kwd-418130371895&amp;hydadcr=4077_13255612&amp;jp-ad-ap=0&amp;keywords=社会科学のためのデータ分析入門&amp;qid=1669555883&amp;qu=eyJxc2MiOiIyLjAwIiwicXNhIjoiMS44MyIsInFzcCI6IjEuNzMifQ%3D%3D&amp;sr=8-1">社会科学のためのデータ分析入門</a>)等を参考にしています。</p>
+<section id="オブジェクト" class="level3">
+<h3 class="anchored" data-anchor-id="オブジェクト">オブジェクト</h3>
+<p>Rでは情報を自分で名前をつけたオブジェクトとして保存できます。Rstudioでは，保存されたオブジェクトは右上のEnvironmentと言うところに表示されます。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>「<code>&lt;-</code>」の左はオブジェクト，右はその中身を表します。なので，「xという名前のオブジェクトに1を入れる」という指示をしています。これを実行すると画面右上にxというオブジェクトが表示されるはずです。xの中身を確認するには，そのオブジェクトの名前（今回の場合<code>x</code>）を打つと良いです。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1</code></pre>
+</div>
+</div>
+<p>文字列でもオブジェクトになります。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>univ <span class="ot">&lt;-</span> <span class="st">"Ritsumeikan University"</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>univ</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Ritsumeikan University"</code></pre>
+</div>
+</div>
+<p>複数の数値の並び（ベクトル）をオブジェクトとすることもできます。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>縦×横の行列も作れます。matrixという名前です。<code>ncol=2</code>は列の数, <code>byrow=TRUE</code>は，横に並べるということ。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">435</span>,<span class="dv">165</span>,<span class="dv">265</span>,<span class="dv">135</span>), <span class="at">ncol=</span><span class="dv">2</span>, <span class="at">byrow=</span><span class="cn">TRUE</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>mat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]  435  165
+[2,]  265  135</code></pre>
+</div>
+</div>
+<p>例えば<code>byrow=FALSE</code> にすると縦に並ぶ</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>mat2 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">435</span>,<span class="dv">165</span>,<span class="dv">265</span>,<span class="dv">135</span>), <span class="at">ncol=</span><span class="dv">2</span>, <span class="at">byrow=</span><span class="cn">FALSE</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>mat2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]  435  265
+[2,]  165  135</code></pre>
+</div>
+</div>
+<p>縦横の名前をつけると</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(mat) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"行1"</span>, <span class="st">"行2"</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(mat)<span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"列1"</span>, <span class="st">"列2"</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>mat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    列1 列2
+行1 435 165
+行2 265 135</code></pre>
+</div>
+</div>
+</section>
+<section id="データフレーム" class="level3">
+<h3 class="anchored" data-anchor-id="データフレーム">データフレーム</h3>
+<p>オブジェクトの中で重要な形式として，データフレームがあります。これは，縦方向に観測値を、横方向に変数を並べたデータを言います。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>age <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">18</span>, <span class="dv">21</span>, <span class="dv">22</span>, <span class="dv">23</span>, <span class="dv">34</span>) <span class="co">#年齢のベクトル</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>gender <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"female"</span>, <span class="st">"male"</span>, <span class="st">"male"</span>, <span class="st">"female"</span>, <span class="st">"female"</span>)<span class="co">#性別のベクトル</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>dframe <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(age, gender)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>dframe</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  age gender
+1  18 female
+2  21   male
+3  22   male
+4  23 female
+5  34 female</code></pre>
+</div>
+</div>
+<p>エクセル等のデータを読み込んで分析する場合は，このデータフレーム形式です。</p>
+<p>データフレームの中の特定の行を指定する場合は，「<code>データフレーム名$列名</code>」</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>dframe<span class="sc">$</span>gender</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "female" "male"   "male"   "female" "female"</code></pre>
+</div>
+</div>
+</section>
+<section id="計算" class="level3">
+<h3 class="anchored" data-anchor-id="計算">計算</h3>
+<p>簡単な計算は，以下の通り</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">+</span><span class="dv">1</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">*</span><span class="dv">6</span> <span class="co">#掛け算は*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 12</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">^</span><span class="dv">4</span> <span class="co">#累乗は^</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">16</span>) <span class="co">#ルートはsqrt()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+</div>
+</section>
+<section id="関数" class="level3">
+<h3 class="anchored" data-anchor-id="関数">関数</h3>
+<p>Rを使う上で最も重要。何がしかの命令をすると，何かの結果が返ってくる。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(dframe<span class="sc">$</span>age) <span class="co">#平均はmean</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 23.6</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(dframe<span class="sc">$</span>age) <span class="co">#最小値（最大値）はmin(max)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 18</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(dframe<span class="sc">$</span>age) <span class="co">#中央値はmedian</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 22</code></pre>
+</div>
+</div>
+<p>上にあるように，Rのコマンドは基本的には，<code>やること(実行する対象)</code>という構造になっている。</p>
+<ul>
+<li><p><code>mean(dframe$age)</code>は，</p>
+<ul>
+<li><p>やることが平均(<code>mean</code>)</p></li>
+<li><p>対象がデータフレームdframeのなかのage (<code>dframe$age</code>)</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="プログラムの改行" class="level3">
+<h3 class="anchored" data-anchor-id="プログラムの改行">プログラムの改行</h3>
+<p>Rではかっこ()やコンマ（,）の後など，コードの切れ目で開業しても動作します。特に()何重にもなる場合，改行したほうが見やすいかもしれません。例えば，上でやった行列の作成コマンド</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">435</span>,<span class="dv">165</span>,<span class="dv">265</span>,<span class="dv">135</span>), <span class="at">ncol=</span><span class="dv">2</span>, <span class="at">byrow=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>は，以下のように書いても全く同じように動作します。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="dv">435</span>,<span class="dv">165</span>,<span class="dv">265</span>,<span class="dv">135</span>), </span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">ncol=</span><span class="dv">2</span>, </span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">byrow=</span><span class="cn">TRUE</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>これでも同じですが，あまり改行しすぎるのもかえって読みにくいかもしれません。自分が見やすいように程よく改行してください。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> </span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">matrix</span>(</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>    <span class="dv">435</span>,</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>    <span class="dv">165</span>,</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>    <span class="dv">265</span>,</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>    <span class="dv">135</span></span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>    ), </span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">ncol=</span><span class="dv">2</span>, </span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">byrow=</span><span class="cn">TRUE</span></span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="分析のための準備" class="level2">
+<h2 class="anchored" data-anchor-id="分析のための準備">分析のための準備</h2>
+<section id="パッケージ" class="level3">
+<h3 class="anchored" data-anchor-id="パッケージ">パッケージ</h3>
+<p>Rはそのままでもある程度のことができますが，より高度なことをしたり，同じことをより簡単にしたりするために追加の機能を足すことができます。この追加の機能はパッケージと言います。</p>
+<p>RがスマートフォンのOSのようなもので，パッケージはアプリのようなもの。iOSやAndroidは，そのままでも色々できるけれど，アプリを入れた方が便利。</p>
+<p>Rのプログラムを格段にわかりやすくするパッケージであるtidyverseを使う準備をしてみます。パッケージは，最初に使う時にはインストールする必要があります（これは1回だけ。App Storeでアプリをとるような感じ）。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>パッケージを使う時には，分析ファイルを実行する最初の段階で以下のコマンドを使います（スマートフォンにすでに入っているアプリを開くイメージ）。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>後で使うので，以下のパッケージも読み込んでおきます。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googledrive)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="working-directoryの設定" class="level3">
+<h3 class="anchored" data-anchor-id="working-directoryの設定">Working Directoryの設定</h3>
+<p>次に，Rが作業する場所（wd）を設定します。これは次で読み込むデータが保存されていたり，プログラムの中で生成したデータが保存されたりする場所です。</p>
+<p>パソコン上の場所をうまく指定できるのであれば，以下のようにコマンドを打てば良い です(下はMacでデスクトップをwdにした例)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"~/Desktop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>場所の指定がうまくできない場合，Rstudio右下の箱の <code>Files</code>タブから指定したいフォルダを選び，⚙マークから「Set As Working Directory」を選ぶことで，コマンドを実行してくれます (その後実行されたコマンドを自分のプログラムファイルにコピーしておくと次回以降便利)</p>
+</section>
+</section>
+<section id="データの読み込み" class="level2">
+<h2 class="anchored" data-anchor-id="データの読み込み">データの読み込み</h2>
+<p>前回はデータを下記のように手打ちしました。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>age <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">18</span>, <span class="dv">21</span>, <span class="dv">22</span>, <span class="dv">23</span>, <span class="dv">34</span>) <span class="co">#年齢のベクトル</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>gender <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"female"</span>, <span class="st">"male"</span>, <span class="st">"male"</span>, <span class="st">"female"</span>, <span class="st">"female"</span>)<span class="co">#性別のベクトル</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>dframe <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(age, gender)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>しかし，アンケートデータや，企業の会計データ等をこのように手打ちするのは現実的ではありません。エクセル等で集計されたデータを読み込むのが一般的です。</p>
+<ul>
+<li>例えばgoogle formsでアンケートを作成したら，googleスプレットシート（googleのエクセルみたいなもの）に自動的に集計されます。</li>
+</ul>
+<p>以下では，エクセルファイルを読み込む方法についてまとめています。</p>
+<section id="csvファイルの取り込み" class="level3">
+<h3 class="anchored" data-anchor-id="csvファイルの取り込み">csvファイルの取り込み</h3>
+<p>エクセルで列が変数，行が観測となるようにデータを作られていることを想定します。まず，これを表計算ソフト上でcsv形式で保存します。ここでは，さんプルデータとして下のような10人の生徒の4教科の科目のテストの点数を記録したファイルを作成しています。</p>
+<p>エクセル形式で保存されたファイルも読み込めますが，余計な情報が入っていないcsvファイルの方がトラブルが少ない？</p>
+<p><img src="images/Screenshot%202022-11-27%20at%2023.39.02.png" class="img-fluid"></p>
+<p>wdに入れたファイルを読み込むには，csv形式なら，<code>read_csv("ファイル名")</code> もしくは<code>read.csv("ファイル名")</code>を使います(ファイルがとても大きいとかでなかったらどっちを使ってもあまり変わりありません)。ここでは，tests.csvと言う名前のデータを，testsと言う名前で読み込んでいます。</p>
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<p>読み込んだデータを見てみます。今回はいいけど，データが大きい場合など，たくさん表示されたら鬱陶しいなら最初のいくつかだけが表示される<code>head(データ名)</code>コマンドが便利です。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tests)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 5
+  出席番号  math japanese history physics
+     &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+1        1    41       35      71      90
+2        2    74       76      30      35
+3        3    65        7      41      75
+4        4    76       24      42      78
+5        5    53        8      47      51
+6        6    29       80      14      19</code></pre>
+</div>
+</div>
+</section>
+<section id="google-driveに保存されたcsvファイルの読み込み" class="level3">
+<h3 class="anchored" data-anchor-id="google-driveに保存されたcsvファイルの読み込み">Google Driveに保存されたcsvファイルの読み込み</h3>
+<p>データをグループで共有するときなどに便利です。</p>
+<ol type="1">
+<li><p>google driveに保存したデータを共有（リンクを知っている人全員）に設定</p></li>
+<li><p>リンクurl（<code>https://drive.google.com/file/d/*********/view?usp=sharing</code>）の********の部分がidなので，その部分をメモしておく。</p></li>
+<li><p>下記の通り，idを定義して，下記の通りのコードを実行すると，目当てのファイルを取り込める。</p></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>id <span class="ot">=</span> <span class="st">"1x7426qSraIRdcbgW3a0F8vMF181Q_DHF"</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>z <span class="ot">=</span> <span class="fu">read_csv</span>(<span class="fu">sprintf</span>(<span class="st">"https://docs.google.com/uc?id=%s&amp;export=download"</span>, id))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="dropboxに保存されたcsvファイルの読み込み" class="level3">
+<h3 class="anchored" data-anchor-id="dropboxに保存されたcsvファイルの読み込み">Dropboxに保存されたcsvファイルの読み込み</h3>
+<p>google driveと基本的に同じ</p>
+<ol type="1">
+<li>Dropbox上のファイルを共有，リンクを取得</li>
+<li>リンクの最後 <code>dl=0</code>を<code>dl=1</code>に変えて，<code>read_csv</code> (もしくは <code>read.csv</code>)コマンドで読み込めます</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>z2 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://www.dropbox.com/s/6x344sfra54mcco/tests.csv?dl=1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 10 Columns: 5
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+dbl (5): 出席番号, math, japanese, history, physics
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="パイプ演算子" class="level2">
+<h2 class="anchored" data-anchor-id="パイプ演算子">パイプ演算子</h2>
+<p>tidyverseとmagrittrパッケージのパイプ演算子を使うことで，同じコマンドをより読みやすくできます。これからは断りなくこれらのパッケージの機能を使います。</p>
+<section id="例1" class="level3">
+<h3 class="anchored" data-anchor-id="例1">例1</h3>
+<p>読み込んだデータ<code>test</code>の算数(math)の平均点を求めたい。普通にやると [1.5.2 ][デ][ータフレーム]にあるように，<code>データフレーム名$列名</code>で指定するので</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(tests<span class="sc">$</span>math)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>パイプ演算子<code>%$%</code>を使うと同じコマンドが以下のようになる</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>tests <span class="sc">%$%</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>(math)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>これだとあまり何がいいのかわかりませんが，複数の変数を指定したいときなど，いちいちデータフレーム名を指定しなくて良いので便利です。</p>
+</section>
+<section id="例2" class="level3">
+<h3 class="anchored" data-anchor-id="例2">例2</h3>
+<p>例1だと便利さを実感しにくいですが，例えば以下のコマンドだともう少し便利さがわかるかもしれません。以下は(1)<code>test</code>データを使って，(2)数学の点数と他の点数の関係を分析(<code>lm</code>)した上で，(3)その結果を表示する(<code>summary</code>)もの。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(math <span class="sc">~</span> japanese <span class="sc">+</span> physics ,<span class="at">data =</span> tests))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>日本語の順番と，コマンドの構造が反対 (結果を表示する→分析内容→データ)</p>
+<p>全く同じことをパイプ演算子を使うと，(1) testデータで(2)分析をして(3)結果の要約を表示する，という思考の順番で書けます。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>tests <span class="sc">%$%</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(math <span class="sc">~</span> japanese <span class="sc">+</span> physics) <span class="sc">%&gt;%</span> </span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>  summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>命令が複雑になる程効果が実感できます。</p>
+<p>ちなみに<code>%$%</code>は，使うデータを指定するのに使う。<code>%&gt;%</code>はコマンドの結果を次のコマンドに渡すのに使う。</p>
+</section>
+</section>
+<section id="データの処理" class="level2">
+<h2 class="anchored" data-anchor-id="データの処理">データの処理</h2>
+<p>分析に入る前に必要そうな処理を紹介します。</p>
+<section id="新しい変数の作成" class="level3">
+<h3 class="anchored" data-anchor-id="新しい変数の作成">新しい変数の作成</h3>
+<p>現在のデータにはない，4教科の合計点が欲しい。新しい変数は<code>mutate()</code>で作る。</p>
+<p>ただし，<code>mutate</code>だけだと，変数を作ってどこにも保存してくれないので，保存場所を指定する必要があります。今回は元のデータに付け足す形で作ります。</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>tests <span class="ot">&lt;-</span> tests <span class="sc">%&gt;%</span> </span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sum =</span> math <span class="sc">+</span> japanese <span class="sc">+</span> history <span class="sc">+</span> physics)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>tests</code> に <code>tests</code>の中のデータを使って作った新しい変数を入れる。1行目が冗長なので，パイプ<code>%&lt;&gt;%</code>を使って書き直すと</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>tests <span class="sc">%&lt;&gt;%</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sum =</span> math <span class="sc">+</span> japanese <span class="sc">+</span> history <span class="sc">+</span> physics)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>以下も同じ</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>tests <span class="sc">%&lt;&gt;%</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sum =</span> <span class="fu">sum</span>(math, japanese, history, physics)) <span class="sc">%&gt;%</span> </span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="参考になるサイト" class="level1">
+<h1>参考になるサイト</h1>
+<p>Rのコマンドやパッケージは無数にあります。いつも使うもの以外は覚えてられません。</p>
+<p>でも大丈夫。ネット上にはさまざまなコマンドの紹介やエラーへの対処法が落ちています。</p>
+<section id="使い方全般" class="level2">
+<h2 class="anchored" data-anchor-id="使い方全般">使い方全般</h2>
+<p>森知晴先生（立命館大学総合心理学部）のサイト (<a href="https://tomoecon.github.io/R_for_graduate_thesis/">卒業論文のためのR入門</a>)</p>
+<ul>
+<li><p>インストール方法から学部卒論程度の分析までの使い方を詳しく説明してくれています。</p></li>
+<li><p>困ったらまずここ</p></li>
+</ul>
+<p>ここに載っていない場合は，「やりたいこと + R」でググると手っ取り早い</p>
+<p>最近ならChatGPTに聞くっていう手も案外いけるらしい…</p>
+</section>
+<section id="エラーについて" class="level2">
+<h2 class="anchored" data-anchor-id="エラーについて">エラーについて</h2>
+<p>プログラミングをやってて一番むかつき，嫌いになる要因はエラーメッセージ</p>
+<p>できることは</p>
+<ol type="1">
+<li><strong>エラーメッセージをちゃんと読むこと</strong></li>
+<li>エラーメッセージをそのままググること</li>
+</ol>
+<p>「<strong>エラーが出てたら99.999%自分が打ったコードが悪い（パソコンは悪くない）ということを自覚すること</strong>」</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
