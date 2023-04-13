@@ -12,7 +12,7 @@ book:
   date-format: YYYY/MM/DD
   chapters:
     - index.qmd
-    - intro.qmd
+    - intro_text.qmd
     - 2_分析環境の構築_text.qmd
     - references.qmd
 
@@ -20,11 +20,7 @@ bibliography: references.bib
 
 format:
   html:
-<<<<<<< HEAD
-    theme: [yeti,fonts.scss]
-=======
     theme: [yeti, fonts.scss]
->>>>>>> ff7e626f19cf118a037ee042b106967f22e3e2f3
     toc: true
     toc-location: left
     toc-title: Contents
