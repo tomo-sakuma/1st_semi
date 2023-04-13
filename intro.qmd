@@ -5,4 +5,4 @@ date-format: YYYY/MM/DD
 
 # イントロダクション
 
-[スライド](https://tomo-sakuma.github.io/1st_semi/1期_slides/1_イントロ.html)
+[スライド](https://tomo-sakuma.github.io/1st_semi/1期_slides/1_イントロ.html){target="_blank"}
