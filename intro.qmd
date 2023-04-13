@@ -7,9 +7,6 @@ date-format: YYYY/MM/DD
 
 [スライド](https://tomo-sakuma.github.io/1st_semi/1期_slides/1_イントロ.html){target="_blank"}
 
-
-
-
 ## ゼミの説明
 
 ![](images/undraw_meeting_re_i53h.svg){fig-align="right"}
@@ -41,8 +38,6 @@ date-format: YYYY/MM/DD
 :::
 :::
 
-
-
 でも，マネジメントコントロールの仕組みを作って運用することは実際には難しい
 
 -   そもそも努力を直接測ることは難しい
@@ -51,7 +46,6 @@ date-format: YYYY/MM/DD
 -   予算などの仕組みは従業員の努力を測る目的以外でも使われるので，意図しない従業員の反応を生んでしまう事も
 
 ![](images/Untitled%E3%81%82.png){fig-align="right" width="624"}
-
 
 ### データ分析
 
@@ -78,7 +72,6 @@ date-format: YYYY/MM/DD
 -   どんな店長が「優秀」？
 
 これらの疑問に答えるためには，結構高度なデータ分析スキルが求められる。
-
 
 ### 「MCS × データ分析」
 
@@ -175,8 +168,6 @@ date-format: YYYY/MM/DD
 
 -   Rの本では，**コードとその実行結果を実演**してほしいです
 
-
-
 #### 発表者以外
 
 -   該当する章に目を通してきてください
@@ -185,8 +176,6 @@ date-format: YYYY/MM/DD
 -   Rの方は自分のパソコンでもコードを動かしてもらいたいので，パソコンは持ってきてください
 
 ![](images/undraw_reading_time_re_phf7.svg)
-
-
 
 #### 話題提供係
 
@@ -360,7 +349,6 @@ RとRstudio
 ![](images/undraw_scientist_8jtx.svg)
 :::
 :::
-
 
 -   日本の経営学，特に会計学は世界に遅れています
 
