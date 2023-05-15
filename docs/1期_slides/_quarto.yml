@@ -14,11 +14,11 @@ format:
     slide-number: true
     preview-links: auto
     logo: kobe.png
-    css: logo.css
+    css: styles.css
     footer: "ゼミ"
     smaller: false
     scrollable: true
-    theme: [white,fonts.scss]
+    theme: [white,format_slide.scss]
     fig-cap-location: bottom
     tbl-cap-location: top
     embed-resources: false

@@ -7,3 +7,10 @@
 .reveal .callout.callout-style-default div.callout-body {
  	  font-size: 1.2em;
 }
+
+.boxbox{
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #54818F;
+  color: #FFFFFF;
+}
