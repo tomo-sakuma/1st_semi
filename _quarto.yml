@@ -12,7 +12,7 @@ book:
   date-format: YYYY/MM/DD
   chapters:
     - index.qmd
-    - intro.qmd
+    - intro_text.qmd
     - 2_分析環境の構築_text.qmd
     - references.qmd
 

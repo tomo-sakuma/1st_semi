@@ -23,6 +23,7 @@ format:
     tbl-cap-location: top
     embed-resources: false
     number-sections: true
+    chalkboard: true
     number-depth: 2
     toc: true
     toc-depth: 1
