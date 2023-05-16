@@ -1,0 +1,171 @@
+---
+title: "3章"
+---
+
+パッケージのロード
+
+```{r}
+rm(list = ls())
+needs(tidyverse, magrittr)
+```
+
+## 問題3.1
+
+2つの確率変数X,Yについて，XとYが独立であるとき
+
+### 1. $\textrm{Var}(X+Y)$
+
+$$
+\begin{split}
+Var(X+Y) &= Cov(X+Y)(X+Y) \\
+&=Cov(X,X)+Cov(Y,Y)+2Cov(X,Y) \\
+&= Var(X) + Var(Y)
+\end{split}
+$$
+
+### 2. $\textrm{Var}(X-Y)$
+
+$Z = -Y$とすると，
+
+$$
+Var(Z) = Var(-Y) = (-1)^2Var(Y) = Var(Y)
+$$
+
+これを利用して
+
+$$\begin{split}
+Var(X+Z) &= Cov(X+Z)(X+Z) \\
+&=Cov(X,X)+Cov(Y,Y)+2Cov(X,Z) \\
+&= Var(X) + Var(Z) \\
+&= Var(X) + Var(Y)
+\end{split}$$
+
+## 問題 3.2
+
+データの読み込み
+
+```{r}
+#| message: false
+tempdata <- read_csv("R_EmpiricalAnalysis_csv/chap03/temperature.csv")
+
+```
+
+1.  項目`temp`の全てを用いて，2014年の東京都の平均気温を計算
+
+```{r}
+tempdata %$% 
+  mean(temp)
+```
+
+2.  抽出し，計算
+
+```{r}
+sub <- tempdata %>% 
+  slice(1:100) #slice:データを指定の範囲で切り取る
+mean(sub$temp)
+```
+
+3.  ランダム抽出
+
+```{r}
+sub2 <- tempdata %>% 
+  slice_sample(n = 100)
+mean(sub2$temp)
+```
+
+## 問題3.3
+
+```{r}
+#| message: false
+
+icedata <- read_csv("R_EmpiricalAnalysis_csv/chap03/icecream.csv")
+
+```
+
+1
+
+```{r}
+icedata %>% 
+  dplyr::select(city,icecream) %>% 
+  arrange(-icecream)
+
+```
+
+```{r}
+icedata%$%
+  which.max(icecream) 
+```
+
+```{r}
+
+icedata %$%
+  plot(icecream,income)  
+
+icedata %$%
+    cor(icecream,income)
+```
+
+## 問題3.4
+
+1
+
+```{r}
+S <- 1000
+X <- rnorm(S, 50, 10)
+rec <- numeric(S)
+
+for(i in 1:S){
+  rec[i] <- (10 < X[i])
+}
+mean(rec)
+```
+
+2
+
+```{r}
+S <- 1000
+X <- rnorm(S, 50, 10)
+rec <- numeric(S)
+
+for(i in 1:S){
+  rec[i] <- (-10 < X[i]) & (X[i] < 10)
+}
+mean(rec)
+```
+
+3
+
+```{r}
+S <- 1000
+X <- rnorm(S, 50, 10)
+Y <- rnorm(S, 50, 10)
+
+rec <- numeric(S)
+
+for(i in 1:S){
+  rec[i] <- (Y[i])^2 < X[i]
+}
+mean(rec)
+```
+
+## 問題3.5
+
+```{r}
+S <- 10000
+N <- 10000
+
+rec <- numeric(S)
+
+for(i in 1:S){
+  X <- rnorm(N,50,10)
+  Xbar <- mean(X)
+  Vn <- var(X)
+  lb <- Xbar - 1.64 * sqrt(Vn / N) 
+  ub <- Xbar + 1.64 * sqrt(Vn / N)
+  rec[i] <- (lb < 50) & (ub > 50) 
+  
+}
+mean(rec)
+
+
+```
