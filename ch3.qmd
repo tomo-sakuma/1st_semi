@@ -1,12 +1,33 @@
 ---
-title: "3章"
+title: "統計3章"
+toc: true
+format:
+  html:
+    theme: [yeti, fonts.scss]
+    toc: true
+    toc-location: left
+    toc-title: Contents
+    number-sections: false
+    number-depth: 3
+    title-block-banner: true
+    logo: kobe.png
+    embed-resources: true
+    df-print: paged  
+editor: visual
 ---
 
-パッケージのロード
+## 準備：パッケージのロード
 
 ```{r}
-rm(list = ls())
-needs(tidyverse, magrittr)
+#| warning: false
+#| message: false
+#| output	: false
+#| echo: true
+
+rm(list=ls()); gc();  gc(); #前の作業など，rのメモリに入っているものをリセットするコマンド
+if (!require("pacman")) install.packages("pacman") #パッケージ管理用のパッケージであるpacmanが入っていない場合はインストール
+pacman::p_load(tidyverse, magrittr) 
+
 ```
 
 ## 問題3.1
@@ -40,15 +61,17 @@ Var(X+Z) &= Cov(X+Z)(X+Z) \\
 &= Var(X) + Var(Y)
 \end{split}$$
 
-## 問題 3.2
+## 問題3.2
 
-データの読み込み
+0.  データの読み込み
 
 ```{r}
 #| message: false
 tempdata <- read_csv("R_EmpiricalAnalysis_csv/chap03/temperature.csv")
-
+tempdata
 ```
+
+------------------------------------------------------------------------
 
 1.  項目`temp`の全てを用いて，2014年の東京都の平均気温を計算
 
@@ -75,26 +98,36 @@ mean(sub2$temp)
 
 ## 問題3.3
 
+### データの読み込み
+
 ```{r}
 #| message: false
 
 icedata <- read_csv("R_EmpiricalAnalysis_csv/chap03/icecream.csv")
-
+icedata
 ```
 
-1
+------------------------------------------------------------------------
+
+### 1. データのうち，都市名とアイスクリーム消費額のみを取り出して，順番を変える
 
 ```{r}
 icedata %>% 
-  dplyr::select(city,icecream) %>% 
-  arrange(-icecream)
+  dplyr::select(city,icecream) %>% #都市名とアイスクリームを取り出し
+  arrange(-icecream) #アイスクリームの降順で並び替え(-は降順の意味)
 
 ```
+
+教科書ではこの方法
 
 ```{r}
 icedata%$%
   which.max(icecream) 
 ```
+
+------------------------------------------------------------------------
+
+### 2. アイスクリームと所得の散布図と相関係数
 
 ```{r}
 
@@ -105,8 +138,23 @@ icedata %$%
     cor(icecream,income)
 ```
 
+------------------------------------------------------------------------
+
+### 3. アイスクリームと15歳以下の子供の人数
+
+```{r}
+
+icedata %$%
+  plot(icecream,u15)  
+
+icedata %$%
+    cor(icecream,u15)
+```
+
 ## 問題3.4
 
+::: columns
+::: {.column width="33%"}
 1
 
 ```{r}
@@ -119,7 +167,9 @@ for(i in 1:S){
 }
 mean(rec)
 ```
+:::
 
+::: {.column width="33%"}
 2
 
 ```{r}
@@ -132,14 +182,15 @@ for(i in 1:S){
 }
 mean(rec)
 ```
+:::
 
+::: {.column width="33%"}
 3
 
 ```{r}
 S <- 1000
 X <- rnorm(S, 50, 10)
 Y <- rnorm(S, 50, 10)
-
 rec <- numeric(S)
 
 for(i in 1:S){
@@ -147,6 +198,8 @@ for(i in 1:S){
 }
 mean(rec)
 ```
+:::
+:::
 
 ## 問題3.5
 
@@ -163,7 +216,6 @@ for(i in 1:S){
   lb <- Xbar - 1.64 * sqrt(Vn / N) 
   ub <- Xbar + 1.64 * sqrt(Vn / N)
   rec[i] <- (lb < 50) & (ub > 50) 
-  
 }
 mean(rec)
 

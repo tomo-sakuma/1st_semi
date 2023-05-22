@@ -1,0 +1,155 @@
+---
+title: "統計4章"
+---
+
+## 準備：パッケージのロード
+
+```{r}
+#| warning: false
+#| message: false
+#| output	: false
+#| echo: true
+
+rm(list=ls()); gc();  gc(); #前の作業など，rのメモリに入っているものをリセットするコマンド
+if (!require("pacman")) install.packages("pacman") #パッケージ管理用のパッケージであるpacmanが入っていない場合はインストール
+pacman::p_load(tidyverse, magrittr,estimatr,car,modelsummary) 
+
+```
+
+## 問題4.1
+
+### 0. データの読み込み
+
+```{r}
+#| message: false
+
+tem_aug <- read_csv("R_EmpiricalAnalysis_csv/chap04/temperature_aug.csv")
+tem_aug
+
+```
+
+### 1 . 昼間の時間帯を分割
+
+```{r}
+tem_aug %<>%
+  mutate(morning = 1* (6 <= time & time <=12 ),
+         afternoon = 1 * (13 <= time & time <=18 ))
+tem_aug
+```
+
+### 2. 土曜日を表すダミー変数を作成
+
+```{r}
+tem_aug %<>%
+  mutate(date = ymd(date),
+         dow = wday(date,label = TRUE),
+         saturday = 1 * (dow == "Sat"))
+
+tem_aug %<>%
+  mutate(sunday = 1 * (dow == "Sun"),
+         recess = 1 * ("2014-08-11"<=date &"2014-08-11"<=date ))
+
+
+  
+#  mutate(saturday = 1 * ((date == "2014/8/2")|
+#                         (date == "2014/8/9")|
+#                         (date == "2014/8/16")|
+#                         (date == "2014/8/23")|
+#                         (date == "2014/8/30")
+#  ))
+
+
+```
+
+### 3. 変数を追加して重回帰分析
+
+```{r}
+reg4_1 <-tem_aug %$%
+  lm(elec ~ temp + prec + sunday + recess + morning + afternoon + saturday)
+summary(reg4_1)
+```
+
+-   電力使用量（`elec`）に対して，気温（`temp`）は正の関係
+-   午前中も午後も正の関係。これは午前でも午後でもない時間（19-5時）と比較していると解釈できる
+    -   午後の方がよりたくさん電気を使っている
+    -   morning と afternoonの差は統計的にも有意（下のコマンド）
+-   土曜は電力消費量が少ない。負の関係
+-   決定係数は0.614
+
+```{r}
+lh_robust(elec ~ temp + prec + sunday + recess + morning + afternoon + saturday,
+            data = tem_aug,
+            linear_hypothesis = "morning = afternoon") %>% 
+  summary
+
+```
+
+```{r}
+tem_aug %<>%
+  mutate(daytime = 1 * (time>=9 & time<=18)
+         )
+
+reg4_0 <- tem_aug %$%
+  lm(elec ~ temp + prec + sunday + recess + daytime) 
+res <- list(reg4_0,reg4_1)
+msummary(res)
+
+
+```
+
+決定係数はむしろ下がる？
+
+## 問題4.2
+
+```{r}
+#| message: false
+
+
+ice <- read_csv("R_EmpiricalAnalysis_csv/chap04/icecream.csv")
+
+```
+
+### 1 
+
+```{r}
+ice %>% 
+  ggplot(aes(x = income, y = icecream)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+### 2
+
+```{r}
+
+ice %$%
+  lm(icecream ~ income + u15) %>% 
+  summary
+```
+
+## 問題4.3
+
+```{r}
+#| message: false
+wage <- read_csv("R_EmpiricalAnalysis_csv/chap04/wage.csv")
+
+```
+
+### 1-3
+
+```{r}
+wage %>% 
+  ggplot(aes(x = educ , y = wage)) +
+  geom_point()+
+  geom_smooth(method = "lm")
+
+wage %$% 
+  lm(wage ~ educ) -> w1
+wage %$% 
+  lm(wage ~ educ + exper) -> w2
+
+ww = list(w1,w2)
+msummary(ww,
+         stars = TRUE,
+         gof_map = c("nobs","r.squared","adj.r.squared"))
+```

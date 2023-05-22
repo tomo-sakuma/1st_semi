@@ -173,5 +173,82 @@
     "title": "1  イントロダクション",
     "section": "1.5 余談…",
     "text": "1.5 余談…\n大学院のゼミもやってます。\n\nが，会計学領域は深刻な研究者不足です。\n\n\n\n東京や京都に経営学研究科がない事もあり，経営学者は主に神戸と一橋という旧高等商業学校から輩出される傾向があります。\n\n研究者養成の使命\n\n\n\n\n\n\n\n神戸大学経営学研究科から\n\n\n\n\nしかし，神戸と一橋でも会計学（特に佐久間の知っている管理会計）の大学院生はすごく減っています。\n博士後期課程にいる大学院生（社会人大学院生を除く）は一橋は知る限り0，神戸は3程度\n日本の学部→修士→アメリカの大学院のようなルートをとる学生もほとんどいない（2人知ってる）\n\n\n\n\n1.5.1 進路面\n\n修士→就職\n\n一般企業\n一部業界（戦略コンサル，専門コンサル，研究所等）は修士卒の方が有利？\n\n\n\n修士→博士→研究者\n\n経営学部・商学部，その他社会科学系，一部理科系学部\n\n\n\n\n修士→アメリカ等の大学院\n\nアメリカの博士課程は，大学と雇用関係（給料が出る）\nトップスクールで生き残れたらトップスクールに就職できる\n\nビジネススクールなら初任給21万ドル程度？\n\n終身雇用権を得る or 米国内外の大学に転職\n\n\n\n\n1.5.2 職業面\n\n\n\n研究者の仕事\n\n研究・教育・その他\n\n勤務形態は基本的に裁量労働\n\n9時5時でスーツ着て出勤しなくても良い\n拘束時間は授業と会議？\n\n研究は競技？\n\nまだ誰もやっていないテーマを探す\n適切なデータを作ったり手に入れたりする\n論文にして審査を受ける\nどのランクの論文雑誌にどんだけ載せたか？\n\n\n\n\n\n\n\n\n\n\n日本の経営学，特に会計学は世界に遅れています\n\n日本の研究者で世界トップ3雑誌に載せた論文は0\n\n厳密にいうと1970年代に数本，ただしアメリカの大学院卒\n\n日本チャンピオンになるチャンスがあります\n\n癖のある職業なので広くお勧めすることはしませんが「そんな選択肢もある」ということを知ってて欲しいです！"
+  },
+  {
+    "objectID": "ch3.html#問題3.1",
+    "href": "ch3.html#問題3.1",
+    "title": "3  統計3章",
+    "section": "問題3.1",
+    "text": "問題3.1\n2つの確率変数X,Yについて，XとYが独立であるとき\n\n1. \\(\\textrm{Var}(X+Y)\\)\n\\[\n\\begin{split}\nVar(X+Y) &= Cov(X+Y)(X+Y) \\\\\n&=Cov(X,X)+Cov(Y,Y)+2Cov(X,Y) \\\\\n&= Var(X) + Var(Y)\n\\end{split}\n\\]\n\n\n2. \\(\\textrm{Var}(X-Y)\\)\n\\(Z = -Y\\)とすると，\n\\[\nVar(Z) = Var(-Y) = (-1)^2Var(Y) = Var(Y)\n\\]\nこれを利用して\n\\[\\begin{split}\nVar(X+Z) &= Cov(X+Z)(X+Z) \\\\\n&=Cov(X,X)+Cov(Y,Y)+2Cov(X,Z) \\\\\n&= Var(X) + Var(Z) \\\\\n&= Var(X) + Var(Y)\n\\end{split}\\]"
+  },
+  {
+    "objectID": "ch3.html#問題-3.2",
+    "href": "ch3.html#問題-3.2",
+    "title": "3  3章",
+    "section": "3.2 問題 3.2",
+    "text": "3.2 問題 3.2\nデータの読み込み\n\ntempdata <- read_csv(\"R_EmpiricalAnalysis_csv/chap03/temperature.csv\")\n\n\n項目tempの全てを用いて，2014年の東京都の平均気温を計算\n\n\ntempdata %$% \n  mean(temp)\n\n[1] 16.64065\n\n\n\n抽出し，計算\n\n\nsub <- tempdata %>% \n  slice(1:100) #slice:データを指定の範囲で切り取る\nmean(sub$temp)\n\n[1] 7.204\n\n\n\nランダム抽出\n\n\nsub2 <- tempdata %>% \n  slice_sample(n = 100)\nmean(sub2$temp)\n\n[1] 18.126"
+  },
+  {
+    "objectID": "ch3.html#問題3.3",
+    "href": "ch3.html#問題3.3",
+    "title": "3  統計3章",
+    "section": "問題3.3",
+    "text": "問題3.3\n\nデータの読み込み\n\nicedata &lt;- read_csv(\"R_EmpiricalAnalysis_csv/chap03/icecream.csv\")\nicedata\n\n\n\n  \n\n\n\n\n\n\n1. データのうち，都市名とアイスクリーム消費額のみを取り出して，順番を変える\n\nicedata %&gt;% \n  dplyr::select(city,icecream) %&gt;% #都市名とアイスクリームを取り出し\n  arrange(-icecream) #アイスクリームの降順で並び替え(-は降順の意味)\n\n\n\n  \n\n\n\n教科書ではこの方法\n\nicedata%$%\n  which.max(icecream) \n\n[1] 17\n\n\n\n\n\n2. アイスクリームと所得の散布図と相関係数\n\nicedata %$%\n  plot(icecream,income)  \n\n\n\nicedata %$%\n    cor(icecream,income)\n\n[1] 0.3113555\n\n\n\n\n\n3. アイスクリームと15歳以下の子供の人数\n\nicedata %$%\n  plot(icecream,u15)  \n\n\n\nicedata %$%\n    cor(icecream,u15)\n\n[1] -0.05910997"
+  },
+  {
+    "objectID": "ch3.html#問題3.4",
+    "href": "ch3.html#問題3.4",
+    "title": "3  統計3章",
+    "section": "問題3.4",
+    "text": "問題3.4\n\n\n1\n\nS &lt;- 1000\nX &lt;- rnorm(S, 50, 10)\nrec &lt;- numeric(S)\n\nfor(i in 1:S){\n  rec[i] &lt;- (10 &lt; X[i])\n}\nmean(rec)\n\n[1] 1\n\n\n\n2\n\nS &lt;- 1000\nX &lt;- rnorm(S, 50, 10)\nrec &lt;- numeric(S)\n\nfor(i in 1:S){\n  rec[i] &lt;- (-10 &lt; X[i]) & (X[i] &lt; 10)\n}\nmean(rec)\n\n[1] 0\n\n\n\n3\n\nS &lt;- 1000\nX &lt;- rnorm(S, 50, 10)\nY &lt;- rnorm(S, 50, 10)\nrec &lt;- numeric(S)\n\nfor(i in 1:S){\n  rec[i] &lt;- (Y[i])^2 &lt; X[i]\n}\nmean(rec)\n\n[1] 0"
+  },
+  {
+    "objectID": "ch3.html#問題3.5",
+    "href": "ch3.html#問題3.5",
+    "title": "3  統計3章",
+    "section": "問題3.5",
+    "text": "問題3.5\n\nS &lt;- 10000\nN &lt;- 10000\n\nrec &lt;- numeric(S)\n\nfor(i in 1:S){\n  X &lt;- rnorm(N,50,10)\n  Xbar &lt;- mean(X)\n  Vn &lt;- var(X)\n  lb &lt;- Xbar - 1.64 * sqrt(Vn / N) \n  ub &lt;- Xbar + 1.64 * sqrt(Vn / N)\n  rec[i] &lt;- (lb &lt; 50) & (ub &gt; 50) \n}\nmean(rec)\n\n[1] 0.898"
+  },
+  {
+    "objectID": "ch4.html#準備パッケージのロード",
+    "href": "ch4.html#準備パッケージのロード",
+    "title": "4  統計4章",
+    "section": "4.1 準備：パッケージのロード",
+    "text": "4.1 準備：パッケージのロード\n\nrm(list=ls()); gc();  gc(); #前の作業など，rのメモリに入っているものをリセットするコマンド\nif (!require(\"pacman\")) install.packages(\"pacman\") #パッケージ管理用のパッケージであるpacmanが入っていない場合はインストール\npacman::p_load(tidyverse, magrittr,estimatr,car,modelsummary)"
+  },
+  {
+    "objectID": "ch4.html#問題4.1",
+    "href": "ch4.html#問題4.1",
+    "title": "4  統計4章",
+    "section": "4.2 問題4.1",
+    "text": "4.2 問題4.1\n\n4.2.1 0. データの読み込み\n\ntem_aug &lt;- read_csv(\"R_EmpiricalAnalysis_csv/chap04/temperature_aug.csv\")\ntem_aug\n\n\n\n  \n\n\n\n\n\n4.2.2 1 . 昼間の時間帯を分割\n\ntem_aug %&lt;&gt;%\n  mutate(morning = 1* (6 &lt;= time & time &lt;=12 ),\n         afternoon = 1 * (13 &lt;= time & time &lt;=18 ))\ntem_aug\n\n\n\n  \n\n\n\n\n\n4.2.3 2. 土曜日を表すダミー変数を作成\n\ntem_aug %&lt;&gt;%\n  mutate(date = ymd(date),\n         dow = wday(date,label = TRUE),\n         saturday = 1 * (dow == \"Sat\"))\n\ntem_aug %&lt;&gt;%\n  mutate(sunday = 1 * (dow == \"Sun\"),\n         recess = 1 * (\"2014-08-11\"&lt;=date &\"2014-08-11\"&lt;=date ))\n\n\n  \n#  mutate(saturday = 1 * ((date == \"2014/8/2\")|\n#                         (date == \"2014/8/9\")|\n#                         (date == \"2014/8/16\")|\n#                         (date == \"2014/8/23\")|\n#                         (date == \"2014/8/30\")\n#  ))\n\n\n\n4.2.4 3. 変数を追加して重回帰分析\n\nreg4_1 &lt;-tem_aug %$%\n  lm(elec ~ temp + prec + sunday + recess + morning + afternoon + saturday)\nsummary(reg4_1)\n\n\nCall:\nlm(formula = elec ~ temp + prec + sunday + recess + morning + \n    afternoon + saturday)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-1030.02  -347.04    30.51   319.40  1012.10 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  244.956    153.145   1.600 0.110138    \ntemp         113.321      5.176  21.895  &lt; 2e-16 ***\nprec          14.677     16.730   0.877 0.380621    \nsunday      -409.299     43.531  -9.402  &lt; 2e-16 ***\nrecess      -127.016     36.236  -3.505 0.000484 ***\nmorning      215.088     38.074   5.649 2.30e-08 ***\nafternoon    589.475     40.687  14.488  &lt; 2e-16 ***\nsaturday    -260.407     43.640  -5.967 3.75e-09 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 419.8 on 736 degrees of freedom\nMultiple R-squared:  0.6579,    Adjusted R-squared:  0.6547 \nF-statistic: 202.2 on 7 and 736 DF,  p-value: &lt; 2.2e-16\n\n\n\n電力使用量（elec）に対して，気温（temp）は正の関係\n午前中も午後も正の関係。これは午前でも午後でもない時間（19-5時）と比較していると解釈できる\n\n午後の方がよりたくさん電気を使っている\nmorning と afternoonの差は統計的にも有意（下のコマンド）\n\n土曜は電力消費量が少ない。負の関係\n決定係数は0.614\n\n\nlh_robust(elec ~ temp + prec + sunday + recess + morning + afternoon + saturday,\n            data = tem_aug,\n            linear_hypothesis = \"morning = afternoon\") %&gt;% \n  summary\n\n$lm_robust\n\nCall:\nlh_robust(elec ~ temp + prec + sunday + recess + morning + afternoon + \n    saturday, data = tem_aug, linear_hypothesis = \"morning = afternoon\")\n\nStandard error type:  HC2 \n\nCoefficients:\n            Estimate Std. Error t value  Pr(&gt;|t|)  CI Lower CI Upper  DF\n(Intercept)   244.96    146.246   1.675 9.437e-02  -42.1531   532.06 736\ntemp          113.32      4.923  23.020 9.656e-89  103.6567   122.99 736\nprec           14.68      7.662   1.916 5.579e-02   -0.3639    29.72 736\nsunday       -409.30     37.482 -10.920 7.855e-26 -482.8845  -335.71 736\nrecess       -127.02     37.099  -3.424 6.520e-04 -199.8492   -54.18 736\nmorning       215.09     40.931   5.255 1.942e-07  134.7322   295.44 736\nafternoon     589.47     35.809  16.462 4.465e-52  519.1750   659.77 736\nsaturday     -260.41     38.882  -6.697 4.215e-11 -336.7395  -184.07 736\n\nMultiple R-squared:  0.6579 ,   Adjusted R-squared:  0.6547 \nF-statistic: 284.9 on 7 and 736 DF,  p-value: &lt; 2.2e-16\n\n$lh\n                    Estimate Std. Error t value  Pr(&gt;|t|) CI Lower CI Upper  DF\nmorning = afternoon   -374.4      36.46  -10.27 3.259e-23     -446   -302.8 736\n\n\n\ntem_aug %&lt;&gt;%\n  mutate(daytime = 1 * (time&gt;=9 & time&lt;=18)\n         )\n\nreg4_0 &lt;- tem_aug %$%\n  lm(elec ~ temp + prec + sunday + recess + daytime) \nres &lt;- list(reg4_0,reg4_1)\nmsummary(res)\n\n\n\n\n\n (1)\n  (2)\n\n\n\n\n(Intercept)\n340.566\n244.956\n\n\n\n(145.412)\n(153.145)\n\n\ntemp\n106.960\n113.321\n\n\n\n(4.968)\n(5.176)\n\n\nprec\n3.500\n14.677\n\n\n\n(16.104)\n(16.730)\n\n\nsunday\n−361.068\n−409.299\n\n\n\n(40.792)\n(43.531)\n\n\nrecess\n−126.891\n−127.016\n\n\n\n(34.517)\n(36.236)\n\n\ndaytime\n581.319\n\n\n\n\n(32.808)\n\n\n\nmorning\n\n215.088\n\n\n\n\n(38.074)\n\n\nafternoon\n\n589.475\n\n\n\n\n(40.687)\n\n\nsaturday\n\n−260.407\n\n\n\n\n(43.640)\n\n\nNum.Obs.\n744\n744\n\n\nR2\n0.683\n0.658\n\n\nR2 Adj.\n0.681\n0.655\n\n\nAIC\n11048.1\n11108.4\n\n\nBIC\n11080.4\n11149.9\n\n\nLog.Lik.\n−5517.053\n−5545.210\n\n\nRMSE\n402.00\n417.51\n\n\n\n\n\n\n\n決定係数はむしろ下がる？"
+  },
+  {
+    "objectID": "ch3.html#準備パッケージのロード",
+    "href": "ch3.html#準備パッケージのロード",
+    "title": "3  統計3章",
+    "section": "準備：パッケージのロード",
+    "text": "準備：パッケージのロード\n\nrm(list=ls()); gc();  gc(); #前の作業など，rのメモリに入っているものをリセットするコマンド\nif (!require(\"pacman\")) install.packages(\"pacman\") #パッケージ管理用のパッケージであるpacmanが入っていない場合はインストール\npacman::p_load(tidyverse, magrittr)"
+  },
+  {
+    "objectID": "ch3.html#問題3.2",
+    "href": "ch3.html#問題3.2",
+    "title": "3  統計3章",
+    "section": "問題3.2",
+    "text": "問題3.2\n\nデータの読み込み\n\n\ntempdata &lt;- read_csv(\"R_EmpiricalAnalysis_csv/chap03/temperature.csv\")\ntempdata\n\n\n\n  \n\n\n\n\n\n項目tempの全てを用いて，2014年の東京都の平均気温を計算\n\n\ntempdata %$% \n  mean(temp)\n\n[1] 16.64065\n\n\n\n抽出し，計算\n\n\nsub &lt;- tempdata %&gt;% \n  slice(1:100) #slice:データを指定の範囲で切り取る\nmean(sub$temp)\n\n[1] 7.204\n\n\n\nランダム抽出\n\n\nsub2 &lt;- tempdata %&gt;% \n  slice_sample(n = 100)\nmean(sub2$temp)\n\n[1] 16.79"
+  },
+  {
+    "objectID": "ch4.html#問題4.2",
+    "href": "ch4.html#問題4.2",
+    "title": "4  統計4章",
+    "section": "4.3 問題4.2",
+    "text": "4.3 問題4.2\n\nice &lt;- read_csv(\"R_EmpiricalAnalysis_csv/chap04/icecream.csv\")\n\n\n4.3.1 1\n\nice %&gt;% \n  ggplot(aes(x = income, y = icecream)) +\n  geom_point() +\n  geom_smooth(method = \"lm\")\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n4.3.2 2\n\nice %$%\n  lm(icecream ~ income + u15) %&gt;% \n  summary\n\n\nCall:\nlm(formula = icecream ~ income + u15)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-1665.6  -478.8  -118.6   613.2  2039.1 \n\nCoefficients:\n              Estimate Std. Error t value Pr(&gt;|t|)   \n(Intercept)  7.223e+03  2.114e+03   3.417  0.00134 **\nincome       6.424e-04  2.830e-04   2.270  0.02795 * \nu15         -8.795e+03  1.476e+04  -0.596  0.55403   \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 871.7 on 46 degrees of freedom\nMultiple R-squared:  0.1039,    Adjusted R-squared:  0.0649 \nF-statistic: 2.666 on 2 and 46 DF,  p-value: 0.08028"
+  },
+  {
+    "objectID": "ch4.html#問題4.3",
+    "href": "ch4.html#問題4.3",
+    "title": "4  統計4章",
+    "section": "4.4 問題4.3",
+    "text": "4.4 問題4.3\n\nwage &lt;- read_csv(\"R_EmpiricalAnalysis_csv/chap04/wage.csv\")\n\n\n4.4.1 1-3\n\nwage %&gt;% \n  ggplot(aes(x = educ , y = wage)) +\n  geom_point()+\n  geom_smooth(method = \"lm\")\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\nwage %$% \n  lm(wage ~ educ) -&gt; w1\nwage %$% \n  lm(wage ~ educ + exper) -&gt; w2\n\nww = list(w1,w2)\nmsummary(ww,\n         stars = TRUE,\n         gof_map = c(\"nobs\",\"r.squared\",\"adj.r.squared\"))\n\n\n\n\n\n (1)\n  (2)\n\n\n\n\n(Intercept)\n183.949***\n−375.588***\n\n\n\n(23.104)\n(37.802)\n\n\neduc\n29.655***\n55.055***\n\n\n\n(1.708)\n(2.140)\n\n\nexper\n\n25.142***\n\n\n\n\n(1.383)\n\n\nNum.Obs.\n3010\n3010\n\n\nR2\n0.091\n0.181\n\n\nR2 Adj.\n0.091\n0.181\n\n\n\n + p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001"
   }
 ]

@@ -8,12 +8,14 @@ book:
   - name: "佐久間 智広"
     affiliation: "Kobe University"
     email: "sakuma@port.kobe-u.ac.jp"
-  date: 2023/04/11
+  date: last-modified
   date-format: YYYY/MM/DD
   chapters:
     - index.qmd
     - intro_text.qmd
     - 2_分析環境の構築_text.qmd
+    - ch3.qmd
+    - ch4.qmd
     - references.qmd
 
 bibliography: references.bib
@@ -29,27 +31,7 @@ format:
     title-block-banner: true
     logo: kobe.png
     embed-resources: true
-  pdf:
-    documentclass: scrreprt
-  revealjs:
-    width: 1280
-    height: 1024
-    slide-number: true
-    preview-links: auto
-    logo: kobe.png
-    css: logo.css
-    footer: "ゼミ"
-    smaller: false
-    scrollable: true
-    theme: [white,fonts.scss]
-    fig-cap-location: bottom
-    tbl-cap-location: top
-    embed-resources: false
-    number-sections: true
-    chalkboard: true
-    number-depth: 2
-    toc: true
-    toc-depth: 1
-    navigation-mode: vertical
+    df-print: paged
+  
 editor: visual
 

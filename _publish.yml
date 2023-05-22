@@ -1,0 +1,6 @@
+- source: ch3.qmd
+  quarto-pub:
+    - id: b0317df3-4c87-418b-9a76-a05133d59ae1
+      url: 'https://tomo-sakuma.quarto.pub/3章'
+    - id: eb9c0db8-4b8a-4f06-93d9-27152fcc726d
+      url: 'https://tomo-sakuma.quarto.pub/ch3'
