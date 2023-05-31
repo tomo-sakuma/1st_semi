@@ -109,7 +109,7 @@ ice <- read_csv("R_EmpiricalAnalysis_csv/chap04/icecream.csv")
 
 ```
 
-### 1 
+### 1
 
 ```{r}
 ice %>% 

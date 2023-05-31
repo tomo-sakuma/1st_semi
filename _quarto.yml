@@ -16,10 +16,11 @@ book:
     - 2_分析環境の構築_text.qmd
     - ch3.qmd
     - ch4.qmd
+    - ch5.qmd
     - references.qmd
 
 bibliography: references.bib
-
+csl: https://www.zotero.org/styles/the-accounting-review
 format:
   html:
     theme: [yeti, fonts.scss]
@@ -32,6 +33,29 @@ format:
     logo: kobe.png
     embed-resources: true
     df-print: paged
-  
+    code-annotations: below
+  revealjs:
+    width: 1280
+    height: 1024
+    slide-number: true
+    preview-links: auto
+    logo: kobe.png
+    css: logo.css
+    footer: "ゼミ"
+    smaller: false
+    scrollable: true
+    theme: [white,fonts.scss]
+    fig-cap-location: bottom
+    tbl-cap-location: top
+    embed-resources: false
+    number-sections: false
+    chalkboard: true
+    number-depth: 2
+    toc: true
+    toc-depth: 1
+    navigation-mode: vertical
+    df-print: paged  
+    output-file: revealjs.html
+    echo: true  
 editor: visual
 
