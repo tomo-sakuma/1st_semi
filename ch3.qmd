@@ -16,6 +16,7 @@ format:
 editor: visual
 ---
 
+
 ## 準備：パッケージのロード
 
 ```{r}

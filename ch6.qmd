@@ -1,0 +1,55 @@
+---
+title: "ch6"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#6.1.1
+pacman::p_load(tidyverse, magrittr)
+videodata <- read_csv("R_EmpiricalAnalysis_csv/chap06/video_game.csv")
+
+videodata %>%
+  ggplot(aes(x = hours, y = grade)) +
+  geom_point()
+
+videodata %>%
+  summarise(cor = cor(grade, hours))
+
+#6.1.3
+crimedata <- readr::read_csv("R_EmpiricalAnalysis_csv/chap06/police_crime.csv")
+crimedata %>%
+  ggplot(aes(x = police, y = crime)) +
+  geom_point()
+
+crimedata %$%
+  cor(police, crime)
+
+crimedata %>%
+  summarise(cor = cor(police, crime))
+
+
+```
+
+```{r}
+n  <- 400　　　　　　　  # 標本の大きさは400
+D  <- rbinom(n, 1, 0.6)  # 確率 0.6 で 1，確率 0.4 で 0 をとるトリートメント変数
+TE <- 2                  # トリートメント効果 = 2 で個人間の差は無いと想定
+Y  <- TE * D + rnorm(n)  # 結果変数
+
+EY1 <- sum(D * Y) / sum(D)
+EY0 <- sum((1 - D) * Y) / sum(1 - D)
+EY1 - EY0
+
+```
+
+```{r}
+Z <- runif(n)        # D と Y に共通して影響を与える変数
+D <- rbinom(n, 1, Z) # Z が大きいほど 1をとりやすいトリートメント変数
+Y <- TE * D + (2 * Z - 1) + rnorm(n)
+
+EY1 <- sum(D * Y) / sum(D)
+EY0 <- sum((1 - D) * Y) / sum(1 - D)
+EY1 - EY0
+
+```

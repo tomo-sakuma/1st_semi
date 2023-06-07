@@ -1,24 +1,45 @@
 [
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  イントロダクション",
-    "section": "",
-    "text": "スライド"
-  },
-  {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "2  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "1期ゼミ資料",
     "section": "",
     "text": "佐久間ゼミ資料\n佐久間からのお知らせ，説明資料はここに書き足していきます。"
+  },
+  {
+    "objectID": "intro_text.html#ゼミの説明",
+    "href": "intro_text.html#ゼミの説明",
+    "title": "1  イントロダクション",
+    "section": "1.1 ゼミの説明",
+    "text": "1.1 ゼミの説明\n\n\n\n\n\n\n1.1.1 MCS\n\nマネジメント・コントロール・システム（MCS)\n\n企業が目的を達成するために従業員をコントロールする仕組み\n\n\n\n\n\n従業員は\n\nできるだけ辛い思いはしたくない\nできるだけ高い給料は欲しい\n自分の部署の利益＞会社全体の利益\n\n企業は\n\n従業員の働きぶり（努力）を把握して\n努力に報いる\n\n仕組みを通して，従業員の努力の方向を会社の目標に向かったものにして，なおかつ努力量を引き出したい\n\n\n\n\n\nでも，マネジメントコントロールの仕組みを作って運用することは実際には難しい\n\nそもそも努力を直接測ることは難しい\nメインで使われる会計の数値は，そもそも別目的（財務会計目的）で作られている\n顧客満足度などの会計以外の数値データもあるけれど財務的成果に結びつくかどうか検証するのは難しい\n予算などの仕組みは従業員の努力を測る目的以外でも使われるので，意図しない従業員の反応を生んでしまう事も\n\n\n\n\n\n\n\n\n1.1.2 データ分析\nマネジメントコントロールは，会社のデータを使う。\n\n\n\n会計数値\n顧客満足度\n歩留率\n回転率\n市場シェア\n\n\n\n\n\n\n\n\n\nこれらのデータから，何かしらの判断をしたり，従業員の働きぶりを評価したりする。\n\n顧客満足度は財務的成果につながっている？\n営業担当者のどんな行動が成果につながりやすい？\nどんな店長が「優秀」？\n\nこれらの疑問に答えるためには，結構高度なデータ分析スキルが求められる。\n\n\n1.1.3 「MCS × データ分析」\n\n会社にはどんなデータがあって，それぞれが何を表しているのか？\n従業員をコントロールするためにどんな仕組みが必要なのか？\n\nといったMCSの知識と\n\nデータ同士にどんな関係があるのか？\nMCSの仕組みはうまくいっているのか？\n\nといったことを検証するデータ分析のスキルを組み合わせて使えるようになって欲しいなぁ。。。"
+  },
+  {
+    "objectID": "intro_text.html#進め方",
+    "href": "intro_text.html#進め方",
+    "title": "1  イントロダクション",
+    "section": "1.2 進め方",
+    "text": "1.2 進め方\nできたら…\n\n会計のテキスト 40分\nRのテキスト 40分\n面白い会社，取組の紹介 10分\n\n\n\n\n\n\n\n\n\n1.2.1 教科書\n\n\n「現場が動き出す会計」\n伊丹敬之 ・青木康晴 (2016)\n日経BPマーケティング(日本経済新聞出版)\n\n「Rによる実証分析 (第2版)」\n星野匡郎・田中久稔・北川梨津 (2023)\nオーム社\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1.2.2 皆さんの作業\n\n発表者\n\n発表資料を作ってきて，前日までにアップロードしてください。\n発表時間の目安は30分\n読んだことのない方もわかるように\nほかの教科書や，その章で扱われている内容の専門書等，自分で探してきた事例などで必要に応じて補足してください\nスライド形式を基本としますが，場合によってはノートブック形式などでも\n\n\n\nPowerPoint\nKeynote\nGoogle Slides\nQuarto (Rの方の時おすすめ）\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nちなみにこのスライドはQuartoで作っています\n\n\n\n\n\nRの本では，コードとその実行結果を実演してほしいです\n\n\n\n発表者以外\n\n該当する章に目を通してきてください\nわからないところがあっても事前に調べてくる必要はありません（当日質問してください）\n自分で読んできて，発表者の発表内容を聞いて分からなかったことや，疑問に思ったことを質問・コメントしてください。\nRの方は自分のパソコンでもコードを動かしてもらいたいので，パソコンは持ってきてください\n\n\n\n\n話題提供係\n\nニュースや雑誌記事，自分の周りで起こったこと等，経営学に関連する何かを見つけてきて話してください。\n3分程度\nどんな内容で，どんなところが興味深かったかを教えてください。\n必要に応じて記事のリンクや資料など用意してください。"
+  },
+  {
+    "objectID": "intro_text.html#ゼミで使うツールについて",
+    "href": "intro_text.html#ゼミで使うツールについて",
+    "title": "1  イントロダクション",
+    "section": "1.3 ゼミで使うツールについて",
+    "text": "1.3 ゼミで使うツールについて\n\n\n\nZulip\n\nゼミ全体やグループ研究等の際の連絡用\n\nNotion\n\n\nゼミの決まりやツールの使い方などをwiki的に活用\nグループ研究や卒論の置き場としても\n場合によってはグループ研究のアイデアメモにも？\n\n\ngoogle drive\n\n発表資料の共有や，共同編集用\n\nRとRstudio\n\n統計分析とその結果のレポート。場合によってはスライドや卒論も書けます。\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1.3.1 Zulip\n\nチャットアプリ。連絡は基本これで\nグループチャットのstreamと個人間のやり取り用のprivateメッセージがある\n\n質問や意見などは基本的には適したサイズのstreamで\n個人的な事情を含む連絡はprivateメッセージで\n\n発表ファイルとかは，google driveの適したフォルダに入れて，そのリンクをzulipに貼ってください\n\n\n\n\n1.3.2 Notion\n\nしばらくは佐久間が更新してみます。\n大学のアドレスで登録すると，有料プランをタダで使えますし，別に無料プランでも大丈夫です。\nzulipの使い方，notionの使い方，Rの使い方などをとりあえずまとめつつありますが，需要に応じて書き足していきます。\n\n\n\n\n1.3.3 Google Drive\n\nクラウドストレージ\n基本的に発表とかのファイル類はここに保存します\nグループで文書とかスライドを共同編集する時にも便利かも\n\n\n\n\n1.3.4 RとRstudio\n\n統計用言語とそれを使いやすくするなんか\n詳しくは来週お話しします\n分析だけでなく，結果のレポートも書けます\nなんなら，論文やスライドも作れます"
+  },
+  {
+    "objectID": "intro_text.html#発表の担当決め",
+    "href": "intro_text.html#発表の担当決め",
+    "title": "1  イントロダクション",
+    "section": "1.4 発表の担当決め",
+    "text": "1.4 発表の担当決め\n次回（4/18）はRの使い方を説明するので，来週からです。\nスケジュールと内容"
+  },
+  {
+    "objectID": "intro_text.html#余談",
+    "href": "intro_text.html#余談",
+    "title": "1  イントロダクション",
+    "section": "1.5 余談…",
+    "text": "1.5 余談…\n大学院のゼミもやってます。\n\nが，会計学領域は深刻な研究者不足です。\n\n\n\n東京や京都に経営学研究科がない事もあり，経営学者は主に神戸と一橋という旧高等商業学校から輩出される傾向があります。\n\n研究者養成の使命\n\n\n\n\n\n\n\n神戸大学経営学研究科から\n\n\n\n\nしかし，神戸と一橋でも会計学（特に佐久間の知っている管理会計）の大学院生はすごく減っています。\n博士後期課程にいる大学院生（社会人大学院生を除く）は一橋は知る限り0，神戸は3程度\n日本の学部→修士→アメリカの大学院のようなルートをとる学生もほとんどいない（2人知ってる）\n\n\n\n\n1.5.1 進路面\n\n修士→就職\n\n一般企業\n一部業界（戦略コンサル，専門コンサル，研究所等）は修士卒の方が有利？\n\n\n\n修士→博士→研究者\n\n経営学部・商学部，その他社会科学系，一部理科系学部\n\n\n\n\n修士→アメリカ等の大学院\n\nアメリカの博士課程は，大学と雇用関係（給料が出る）\nトップスクールで生き残れたらトップスクールに就職できる\n\nビジネススクールなら初任給21万ドル程度？\n\n終身雇用権を得る or 米国内外の大学に転職\n\n\n\n\n1.5.2 職業面\n\n\n\n研究者の仕事\n\n研究・教育・その他\n\n勤務形態は基本的に裁量労働\n\n9時5時でスーツ着て出勤しなくても良い\n拘束時間は授業と会議？\n\n研究は競技？\n\nまだ誰もやっていないテーマを探す\n適切なデータを作ったり手に入れたりする\n論文にして審査を受ける\nどのランクの論文雑誌にどんだけ載せたか？\n\n\n\n\n\n\n\n\n\n\n日本の経営学，特に会計学は世界に遅れています\n\n日本の研究者で世界トップ3雑誌に載せた論文は0\n\n厳密にいうと1970年代に数本，ただしアメリカの大学院卒\n\n日本チャンピオンになるチャンスがあります\n\n癖のある職業なので広くお勧めすることはしませんが「そんな選択肢もある」ということを知ってて欲しいです！"
   },
   {
     "objectID": "2_分析環境の構築_text.html",
@@ -60,7 +81,7 @@
     "href": "2_分析環境の構築_text.html#rプログラミングの基礎",
     "title": "2  分析環境の構築",
     "section": "2.5 Rプログラミングの基礎",
-    "text": "2.5 Rプログラミングの基礎\nこのパートは森知晴先生（立命館大学総合心理学部）のサイト (卒業論文のためのR入門) 及び今井耕介先生（Harvard University / 東京大学）の著書 (社会科学のためのデータ分析入門)等を参考にしています。\n\n2.5.1 オブジェクト\nRでは情報を自分で名前をつけたオブジェクトとして保存できます。Rstudioでは，保存されたオブジェクトは右上のEnvironmentと言うところに表示されます。\n\nx <- 1\n\n「<-」の左はオブジェクト，右はその中身を表します。なので，「xという名前のオブジェクトに1を入れる」という指示をしています。これを実行すると画面右上にxというオブジェクトが表示されるはずです。xの中身を確認するには，そのオブジェクトの名前（今回の場合x）を打つと良いです。\n\nx\n\n[1] 1\n\n\n文字列でもオブジェクトになります。\n\nuniv <- \"Ritsumeikan University\"\nuniv\n\n[1] \"Ritsumeikan University\"\n\n\n複数の数値の並び（ベクトル）をオブジェクトとすることもできます。\n\nvec <- c(1, 2, 3, 4, 5)\n\n縦×横の行列も作れます。matrixという名前です。ncol=2は列の数, byrow=TRUEは，横に並べるということ。\n\nmat <- matrix(c(435,165,265,135), ncol=2, byrow=TRUE)\nmat\n\n     [,1] [,2]\n[1,]  435  165\n[2,]  265  135\n\n\n例えばbyrow=FALSE にすると縦に並ぶ\n\nmat2 <- matrix(c(435,165,265,135), ncol=2, byrow=FALSE)\nmat2\n\n     [,1] [,2]\n[1,]  435  265\n[2,]  165  135\n\n\n縦横の名前をつけると\n\nrownames(mat) <- c(\"行1\", \"行2\")\ncolnames(mat)<- c(\"列1\", \"列2\")\nmat\n\n    列1 列2\n行1 435 165\n行2 265 135\n\n\n\n\n2.5.2 データフレーム\nオブジェクトの中で重要な形式として，データフレームがあります。これは，縦方向に観測値を、横方向に変数を並べたデータを言います。\n\nage <- c(18, 21, 22, 23, 34) #年齢のベクトル\ngender <- c(\"female\", \"male\", \"male\", \"female\", \"female\")#性別のベクトル\ndframe <- data.frame(age, gender)\ndframe\n\n  age gender\n1  18 female\n2  21   male\n3  22   male\n4  23 female\n5  34 female\n\n\nエクセル等のデータを読み込んで分析する場合は，このデータフレーム形式です。\nデータフレームの中の特定の行を指定する場合は，「データフレーム名$列名」\n\ndframe$gender\n\n[1] \"female\" \"male\"   \"male\"   \"female\" \"female\"\n\n\n\n\n2.5.3 計算\n簡単な計算は，以下の通り\n\n1+1 \n\n[1] 2\n\n2*6 #掛け算は*\n\n[1] 12\n\n2^4 #累乗は^\n\n[1] 16\n\nsqrt(16) #ルートはsqrt()\n\n[1] 4\n\n\n\n\n2.5.4 関数\nRを使う上で最も重要。何がしかの命令をすると，何かの結果が返ってくる。\n\nmean(dframe$age) #平均はmean\n\n[1] 23.6\n\nmin(dframe$age) #最小値（最大値）はmin(max)\n\n[1] 18\n\nmedian(dframe$age) #中央値はmedian\n\n[1] 22\n\n\n上にあるように，Rのコマンドは基本的には，やること(実行する対象)という構造になっている。\n\nmean(dframe$age)は，\n\nやることが平均(mean)\n対象がデータフレームdframeのなかのage (dframe$age)\n\n\n\n\n2.5.5 プログラムの改行\nRではかっこ()やコンマ（,）の後など，コードの切れ目で開業しても動作します。特に()何重にもなる場合，改行したほうが見やすいかもしれません。例えば，上でやった行列の作成コマンド\n\nmat <- matrix(c(435,165,265,135), ncol=2, byrow=TRUE)\n\nは，以下のように書いても全く同じように動作します。\n\nmat <- matrix(\n  c(435,165,265,135), \n  ncol=2, \n  byrow=TRUE\n  )\n\nこれでも同じですが，あまり改行しすぎるのもかえって読みにくいかもしれません。自分が見やすいように程よく改行してください。\n\nmat <- \n  matrix(\n  c(\n    435,\n    165,\n    265,\n    135\n    ), \n  ncol=2, \n  byrow=TRUE\n  )"
+    "text": "2.5 Rプログラミングの基礎\nこのパートは森知晴先生（立命館大学総合心理学部）のサイト (卒業論文のためのR入門) 及び今井耕介先生（Harvard University / 東京大学）の著書 (社会科学のためのデータ分析入門)等を参考にしています。\n\n2.5.1 オブジェクト\nRでは情報を自分で名前をつけたオブジェクトとして保存できます。Rstudioでは，保存されたオブジェクトは右上のEnvironmentと言うところに表示されます。\n\nx &lt;- 1\n\n「&lt;-」の左はオブジェクト，右はその中身を表します。なので，「xという名前のオブジェクトに1を入れる」という指示をしています。これを実行すると画面右上にxというオブジェクトが表示されるはずです。xの中身を確認するには，そのオブジェクトの名前（今回の場合x）を打つと良いです。\n\nx\n\n[1] 1\n\n\n文字列でもオブジェクトになります。\n\nuniv &lt;- \"Ritsumeikan University\"\nuniv\n\n[1] \"Ritsumeikan University\"\n\n\n複数の数値の並び（ベクトル）をオブジェクトとすることもできます。\n\nvec &lt;- c(1, 2, 3, 4, 5)\n\n縦×横の行列も作れます。matrixという名前です。ncol=2は列の数, byrow=TRUEは，横に並べるということ。\n\nmat &lt;- matrix(c(435,165,265,135), ncol=2, byrow=TRUE)\nmat\n\n     [,1] [,2]\n[1,]  435  165\n[2,]  265  135\n\n\n例えばbyrow=FALSE にすると縦に並ぶ\n\nmat2 &lt;- matrix(c(435,165,265,135), ncol=2, byrow=FALSE)\nmat2\n\n     [,1] [,2]\n[1,]  435  265\n[2,]  165  135\n\n\n縦横の名前をつけると\n\nrownames(mat) &lt;- c(\"行1\", \"行2\")\ncolnames(mat)&lt;- c(\"列1\", \"列2\")\nmat\n\n    列1 列2\n行1 435 165\n行2 265 135\n\n\n\n\n2.5.2 データフレーム\nオブジェクトの中で重要な形式として，データフレームがあります。これは，縦方向に観測値を、横方向に変数を並べたデータを言います。\n\nage &lt;- c(18, 21, 22, 23, 34) #年齢のベクトル\ngender &lt;- c(\"female\", \"male\", \"male\", \"female\", \"female\")#性別のベクトル\ndframe &lt;- data.frame(age, gender)\ndframe\n\n\n\n  \n\n\n\nエクセル等のデータを読み込んで分析する場合は，このデータフレーム形式です。\nデータフレームの中の特定の行を指定する場合は，「データフレーム名$列名」\n\ndframe$gender\n\n[1] \"female\" \"male\"   \"male\"   \"female\" \"female\"\n\n\n\n\n2.5.3 計算\n簡単な計算は，以下の通り\n\n1+1 \n\n[1] 2\n\n2*6 #掛け算は*\n\n[1] 12\n\n2^4 #累乗は^\n\n[1] 16\n\nsqrt(16) #ルートはsqrt()\n\n[1] 4\n\n\n\n\n2.5.4 関数\nRを使う上で最も重要。何がしかの命令をすると，何かの結果が返ってくる。\n\nmean(dframe$age) #平均はmean\n\n[1] 23.6\n\nmin(dframe$age) #最小値（最大値）はmin(max)\n\n[1] 18\n\nmedian(dframe$age) #中央値はmedian\n\n[1] 22\n\n\n上にあるように，Rのコマンドは基本的には，やること(実行する対象)という構造になっている。\n\nmean(dframe$age)は，\n\nやることが平均(mean)\n対象がデータフレームdframeのなかのage (dframe$age)\n\n\n\n\n2.5.5 プログラムの改行\nRではかっこ()やコンマ（,）の後など，コードの切れ目で開業しても動作します。特に()何重にもなる場合，改行したほうが見やすいかもしれません。例えば，上でやった行列の作成コマンド\n\nmat &lt;- matrix(c(435,165,265,135), ncol=2, byrow=TRUE)\n\nは，以下のように書いても全く同じように動作します。\n\nmat &lt;- matrix(\n  c(435,165,265,135), \n  ncol=2, \n  byrow=TRUE\n  )\n\nこれでも同じですが，あまり改行しすぎるのもかえって読みにくいかもしれません。自分が見やすいように程よく改行してください。\n\nmat &lt;- \n  matrix(\n  c(\n    435,\n    165,\n    265,\n    135\n    ), \n  ncol=2, \n  byrow=TRUE\n  )"
   },
   {
     "objectID": "2_分析環境の構築_text.html#分析のための準備",
@@ -74,21 +95,21 @@
     "href": "2_分析環境の構築_text.html#データの読み込み",
     "title": "2  分析環境の構築",
     "section": "2.7 データの読み込み",
-    "text": "2.7 データの読み込み\n前回はデータを下記のように手打ちしました。\n\nage <- c(18, 21, 22, 23, 34) #年齢のベクトル\ngender <- c(\"female\", \"male\", \"male\", \"female\", \"female\")#性別のベクトル\ndframe <- data.frame(age, gender)\n\nしかし，アンケートデータや，企業の会計データ等をこのように手打ちするのは現実的ではありません。エクセル等で集計されたデータを読み込むのが一般的です。\n\n例えばgoogle formsでアンケートを作成したら，googleスプレットシート（googleのエクセルみたいなもの）に自動的に集計されます。\n\n以下では，エクセルファイルを読み込む方法についてまとめています。\n\n2.7.1 csvファイルの取り込み\nエクセルで列が変数，行が観測となるようにデータを作られていることを想定します。まず，これを表計算ソフト上でcsv形式で保存します。ここでは，さんプルデータとして下のような10人の生徒の4教科の科目のテストの点数を記録したファイルを作成しています。\nエクセル形式で保存されたファイルも読み込めますが，余計な情報が入っていないcsvファイルの方がトラブルが少ない？\n\nwdに入れたファイルを読み込むには，csv形式なら，read_csv(\"ファイル名\") もしくはread.csv(\"ファイル名\")を使います(ファイルがとても大きいとかでなかったらどっちを使ってもあまり変わりありません)。ここでは，tests.csvと言う名前のデータを，testsと言う名前で読み込んでいます。\n\n\n\n\n\n\n読み込んだデータを見てみます。今回はいいけど，データが大きい場合など，たくさん表示されたら鬱陶しいなら最初のいくつかだけが表示されるhead(データ名)コマンドが便利です。\n\nhead(tests)\n\n# A tibble: 6 × 5\n  出席番号  math japanese history physics\n     <dbl> <dbl>    <dbl>   <dbl>   <dbl>\n1        1    41       35      71      90\n2        2    74       76      30      35\n3        3    65        7      41      75\n4        4    76       24      42      78\n5        5    53        8      47      51\n6        6    29       80      14      19\n\n\n\n\n2.7.2 Google Driveに保存されたcsvファイルの読み込み\nデータをグループで共有するときなどに便利です。\n\ngoogle driveに保存したデータを共有（リンクを知っている人全員）に設定\nリンクurl（https://drive.google.com/file/d/*********/view?usp=sharing）の********の部分がidなので，その部分をメモしておく。\n下記の通り，idを定義して，下記の通りのコードを実行すると，目当てのファイルを取り込める。\n\n\nid = \"1x7426qSraIRdcbgW3a0F8vMF181Q_DHF\"\n\nz = read_csv(sprintf(\"https://docs.google.com/uc?id=%s&export=download\", id))\n\n\n\n2.7.3 Dropboxに保存されたcsvファイルの読み込み\ngoogle driveと基本的に同じ\n\nDropbox上のファイルを共有，リンクを取得\nリンクの最後 dl=0をdl=1に変えて，read_csv (もしくは read.csv)コマンドで読み込めます\n\n\nz2 <- read_csv(\"https://www.dropbox.com/s/6x344sfra54mcco/tests.csv?dl=1\")\n\nRows: 10 Columns: 5\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\ndbl (5): 出席番号, math, japanese, history, physics\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message."
+    "text": "2.7 データの読み込み\n前回はデータを下記のように手打ちしました。\n\nage &lt;- c(18, 21, 22, 23, 34) #年齢のベクトル\ngender &lt;- c(\"female\", \"male\", \"male\", \"female\", \"female\")#性別のベクトル\ndframe &lt;- data.frame(age, gender)\n\nしかし，アンケートデータや，企業の会計データ等をこのように手打ちするのは現実的ではありません。エクセル等で集計されたデータを読み込むのが一般的です。\n\n例えばgoogle formsでアンケートを作成したら，googleスプレットシート（googleのエクセルみたいなもの）に自動的に集計されます。\n\n以下では，エクセルファイルを読み込む方法についてまとめています。\n\n2.7.1 csvファイルの取り込み\nエクセルで列が変数，行が観測となるようにデータを作られていることを想定します。まず，これを表計算ソフト上でcsv形式で保存します。ここでは，さんプルデータとして下のような10人の生徒の4教科の科目のテストの点数を記録したファイルを作成しています。\nエクセル形式で保存されたファイルも読み込めますが，余計な情報が入っていないcsvファイルの方がトラブルが少ない？\n\nwdに入れたファイルを読み込むには，csv形式なら，read_csv(\"ファイル名\") もしくはread.csv(\"ファイル名\")を使います(ファイルがとても大きいとかでなかったらどっちを使ってもあまり変わりありません)。ここでは，tests.csvと言う名前のデータを，testsと言う名前で読み込んでいます。\n読み込んだデータを見てみます。今回はいいけど，データが大きい場合など，たくさん表示されたら鬱陶しいなら最初のいくつかだけが表示されるhead(データ名)コマンドが便利です。\n\nhead(tests)\n\n\n\n  \n\n\n\n\n\n2.7.2 Google Driveに保存されたcsvファイルの読み込み\nデータをグループで共有するときなどに便利です。\n\ngoogle driveに保存したデータを共有（リンクを知っている人全員）に設定\nリンクurl（https://drive.google.com/file/d/*********/view?usp=sharing）の********の部分がidなので，その部分をメモしておく。\n下記の通り，idを定義して，下記の通りのコードを実行すると，目当てのファイルを取り込める。\n\n\nid = \"1x7426qSraIRdcbgW3a0F8vMF181Q_DHF\"\n\nz = read_csv(sprintf(\"https://docs.google.com/uc?id=%s&export=download\", id))\n\n\n\n2.7.3 Dropboxに保存されたcsvファイルの読み込み\ngoogle driveと基本的に同じ\n\nDropbox上のファイルを共有，リンクを取得\nリンクの最後 dl=0をdl=1に変えて，read_csv (もしくは read.csv)コマンドで読み込めます\n\n\nz2 &lt;- read_csv(\"https://www.dropbox.com/s/6x344sfra54mcco/tests.csv?dl=1\")\n\nRows: 10 Columns: 5\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\ndbl (5): 出席番号, math, japanese, history, physics\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message."
   },
   {
     "objectID": "2_分析環境の構築_text.html#パイプ演算子",
     "href": "2_分析環境の構築_text.html#パイプ演算子",
     "title": "2  分析環境の構築",
     "section": "2.8 パイプ演算子",
-    "text": "2.8 パイプ演算子\ntidyverseとmagrittrパッケージのパイプ演算子を使うことで，同じコマンドをより読みやすくできます。これからは断りなくこれらのパッケージの機能を使います。\n\n2.8.1 例1\n読み込んだデータtestの算数(math)の平均点を求めたい。普通にやると [1.5.2 ][デ][ータフレーム]にあるように，データフレーム名$列名で指定するので\n\nmean(tests$math)\n\nパイプ演算子%$%を使うと同じコマンドが以下のようになる\n\ntests %$%\n  mean(math)\n\nこれだとあまり何がいいのかわかりませんが，複数の変数を指定したいときなど，いちいちデータフレーム名を指定しなくて良いので便利です。\n\n\n2.8.2 例2\n例1だと便利さを実感しにくいですが，例えば以下のコマンドだともう少し便利さがわかるかもしれません。以下は(1)testデータを使って，(2)数学の点数と他の点数の関係を分析(lm)した上で，(3)その結果を表示する(summary)もの。\n\nsummary(lm(math ~ japanese + physics ,data = tests))\n\n日本語の順番と，コマンドの構造が反対 (結果を表示する→分析内容→データ)\n全く同じことをパイプ演算子を使うと，(1) testデータで(2)分析をして(3)結果の要約を表示する，という思考の順番で書けます。\n\ntests %$%\n  lm(math ~ japanese + physics) %>% \n  summary\n\n命令が複雑になる程効果が実感できます。\nちなみに%$%は，使うデータを指定するのに使う。%>%はコマンドの結果を次のコマンドに渡すのに使う。"
+    "text": "2.8 パイプ演算子\ntidyverseとmagrittrパッケージのパイプ演算子を使うことで，同じコマンドをより読みやすくできます。これからは断りなくこれらのパッケージの機能を使います。\n\n2.8.1 例1\n読み込んだデータtestの算数(math)の平均点を求めたい。普通にやると [1.5.2 ][デ][ータフレーム]にあるように，データフレーム名$列名で指定するので\n\nmean(tests$math)\n\nパイプ演算子%$%を使うと同じコマンドが以下のようになる\n\ntests %$%\n  mean(math)\n\nこれだとあまり何がいいのかわかりませんが，複数の変数を指定したいときなど，いちいちデータフレーム名を指定しなくて良いので便利です。\n\n\n2.8.2 例2\n例1だと便利さを実感しにくいですが，例えば以下のコマンドだともう少し便利さがわかるかもしれません。以下は(1)testデータを使って，(2)数学の点数と他の点数の関係を分析(lm)した上で，(3)その結果を表示する(summary)もの。\n\nsummary(lm(math ~ japanese + physics ,data = tests))\n\n日本語の順番と，コマンドの構造が反対 (結果を表示する→分析内容→データ)\n全く同じことをパイプ演算子を使うと，(1) testデータで(2)分析をして(3)結果の要約を表示する，という思考の順番で書けます。\n\ntests %$%\n  lm(math ~ japanese + physics) %&gt;% \n  summary\n\n命令が複雑になる程効果が実感できます。\nちなみに%$%は，使うデータを指定するのに使う。%&gt;%はコマンドの結果を次のコマンドに渡すのに使う。"
   },
   {
     "objectID": "2_分析環境の構築_text.html#データの処理",
     "href": "2_分析環境の構築_text.html#データの処理",
     "title": "2  分析環境の構築",
     "section": "2.9 データの処理",
-    "text": "2.9 データの処理\n分析に入る前に必要そうな処理を紹介します。\n\n2.9.1 新しい変数の作成\n現在のデータにはない，4教科の合計点が欲しい。新しい変数はmutate()で作る。\nただし，mutateだけだと，変数を作ってどこにも保存してくれないので，保存場所を指定する必要があります。今回は元のデータに付け足す形で作ります。\n\ntests <- tests %>% \n  mutate(sum = math + japanese + history + physics)\n\ntests に testsの中のデータを使って作った新しい変数を入れる。1行目が冗長なので，パイプ%<>%を使って書き直すと\n\ntests %<>%\n  mutate(sum = math + japanese + history + physics)\n\n以下も同じ\n\ntests %<>%\n  rowwise() %>% \n  mutate(sum = sum(math, japanese, history, physics)) %>% \n  ungroup()"
+    "text": "2.9 データの処理\n分析に入る前に必要そうな処理を紹介します。\n\n2.9.1 新しい変数の作成\n現在のデータにはない，4教科の合計点が欲しい。新しい変数はmutate()で作る。\nただし，mutateだけだと，変数を作ってどこにも保存してくれないので，保存場所を指定する必要があります。今回は元のデータに付け足す形で作ります。\n\ntests &lt;- tests %&gt;% \n  mutate(sum = math + japanese + history + physics)\n\ntests に testsの中のデータを使って作った新しい変数を入れる。1行目が冗長なので，パイプ%&lt;&gt;%を使って書き直すと\n\ntests %&lt;&gt;%\n  mutate(sum = math + japanese + history + physics)\n\n以下も同じ\n\ntests %&lt;&gt;%\n  rowwise() %&gt;% \n  mutate(sum = sum(math, japanese, history, physics)) %&gt;% \n  ungroup()"
   },
   {
     "objectID": "2_分析環境の構築_text.html#使い方全般",
@@ -105,74 +126,11 @@
     "text": "3.2 エラーについて\nプログラミングをやってて一番むかつき，嫌いになる要因はエラーメッセージ\nできることは\n\nエラーメッセージをちゃんと読むこと\nエラーメッセージをそのままググること\n\n「エラーが出てたら99.999%自分が打ったコードが悪い（パソコンは悪くない）ということを自覚すること」"
   },
   {
-    "objectID": "intro.html#ゼミの説明",
-    "href": "intro.html#ゼミの説明",
-    "title": "1  イントロダクション",
-    "section": "1.1 ゼミの説明",
-    "text": "1.1 ゼミの説明\n\n\n\n\n\n\n1.1.1 MCS\n\nマネジメント・コントロール・システム（MCS)\n\n企業が目的を達成するために従業員をコントロールする仕組み\n\n\n\n\n\n従業員は\n\nできるだけ辛い思いはしたくない\nできるだけ高い給料は欲しい\n自分の部署の利益＞会社全体の利益\n\n企業は\n\n従業員の働きぶり（努力）を把握して\n努力に報いる\n\n仕組みを通して，従業員の努力の方向を会社の目標に向かったものにして，なおかつ努力量を引き出したい\n\n\n\n\n\nでも，マネジメントコントロールの仕組みを作って運用することは実際には難しい\n\nそもそも努力を直接測ることは難しい\nメインで使われる会計の数値は，そもそも別目的（財務会計目的）で作られている\n顧客満足度などの会計以外の数値データもあるけれど財務的成果に結びつくかどうか検証するのは難しい\n予算などの仕組みは従業員の努力を測る目的以外でも使われるので，意図しない従業員の反応を生んでしまう事も\n\n\n\n\n\n\n\n\n1.1.2 データ分析\nマネジメントコントロールは，会社のデータを使う。\n\n\n\n会計数値\n顧客満足度\n歩留率\n回転率\n市場シェア\n\n\n\n\n\n\n\n\n\nこれらのデータから，何かしらの判断をしたり，従業員の働きぶりを評価したりする。\n\n顧客満足度は財務的成果につながっている？\n営業担当者のどんな行動が成果につながりやすい？\nどんな店長が「優秀」？\n\nこれらの疑問に答えるためには，結構高度なデータ分析スキルが求められる。\n\n\n1.1.3 「MCS × データ分析」\n\n会社にはどんなデータがあって，それぞれが何を表しているのか？\n従業員をコントロールするためにどんな仕組みが必要なのか？\n\nといったMCSの知識と\n\nデータ同士にどんな関係があるのか？\nMCSの仕組みはうまくいっているのか？\n\nといったことを検証するデータ分析のスキルを組み合わせて使えるようになって欲しいなぁ。。。"
-  },
-  {
-    "objectID": "intro.html#進め方",
-    "href": "intro.html#進め方",
-    "title": "1  イントロダクション",
-    "section": "1.2 進め方",
-    "text": "1.2 進め方\nできたら…\n\n会計のテキスト 40分\nRのテキスト 40分\n面白い会社，取組の紹介 10分\n\n\n\n\n\n\n\n\n\n1.2.1 教科書\n\n\n「現場が動き出す会計」\n伊丹敬之 ・青木康晴 (2016)\n日経BPマーケティング(日本経済新聞出版)\n\n「Rによる実証分析 (第2版)」\n星野匡郎・田中久稔・北川梨津 (2023)\nオーム社\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1.2.2 皆さんの作業\n\n発表者\n\n発表資料を作ってきて，前日までにアップロードしてください。\n発表時間の目安は30分\n読んだことのない方もわかるように\nほかの教科書や，その章で扱われている内容の専門書等，自分で探してきた事例などで必要に応じて補足してください\nスライド形式を基本としますが，場合によってはノートブック形式などでも\n\n\n\nPowerPoint\nKeynote\nGoogle Slides\nQuarto (Rの方の時おすすめ）\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nちなみにこのスライドはQuartoで作っています\n\n\n\n\n\nRの本では，コードとその実行結果を実演してほしいです\n\n\n\n発表者以外\n\n該当する章に目を通してきてください\nわからないところがあっても事前に調べてくる必要はありません（当日質問してください）\n自分で読んできて，発表者の発表内容を聞いて分からなかったことや，疑問に思ったことを質問・コメントしてください。\nRの方は自分のパソコンでもコードを動かしてもらいたいので，パソコンは持ってきてください\n\n\n\n\n話題提供係\n\nニュースや雑誌記事，自分の周りで起こったこと等，経営学に関連する何かを見つけてきて話してください。\n3分程度\nどんな内容で，どんなところが興味深かったかを教えてください。\n必要に応じて記事のリンクや資料など用意してください。"
-  },
-  {
-    "objectID": "intro.html#ゼミで使うツールについて",
-    "href": "intro.html#ゼミで使うツールについて",
-    "title": "1  イントロダクション",
-    "section": "1.3 ゼミで使うツールについて",
-    "text": "1.3 ゼミで使うツールについて\n\n\n\nZulip\n\nゼミ全体やグループ研究等の際の連絡用\n\nNotion\n\n\nゼミの決まりやツールの使い方などをwiki的に活用\nグループ研究や卒論の置き場としても\n場合によってはグループ研究のアイデアメモにも？\n\n\ngoogle drive\n\n発表資料の共有や，共同編集用\n\nRとRstudio\n\n統計分析とその結果のレポート。場合によってはスライドや卒論も書けます。\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1.3.1 Zulip\n\nチャットアプリ。連絡は基本これで\nグループチャットのstreamと個人間のやり取り用のprivateメッセージがある\n\n質問や意見などは基本的には適したサイズのstreamで\n個人的な事情を含む連絡はprivateメッセージで\n\n発表ファイルとかは，google driveの適したフォルダに入れて，そのリンクをzulipに貼ってください\n\n\n\n\n1.3.2 Notion\n\nしばらくは佐久間が更新してみます。\n大学のアドレスで登録すると，有料プランをタダで使えますし，別に無料プランでも大丈夫です。\nzulipの使い方，notionの使い方，Rの使い方などをとりあえずまとめつつありますが，需要に応じて書き足していきます。\n\n\n\n\n1.3.3 Google Drive\n\nクラウドストレージ\n基本的に発表とかのファイル類はここに保存します\nグループで文書とかスライドを共同編集する時にも便利かも\n\n\n\n\n1.3.4 RとRstudio\n\n統計用言語とそれを使いやすくするなんか\n詳しくは来週お話しします\n分析だけでなく，結果のレポートも書けます\nなんなら，論文やスライドも作れます"
-  },
-  {
-    "objectID": "intro.html#発表の担当決め",
-    "href": "intro.html#発表の担当決め",
-    "title": "1  イントロダクション",
-    "section": "1.4 発表の担当決め",
-    "text": "1.4 発表の担当決め\n次回（4/18）はRの使い方を説明するので，来週からです。\nスケジュールと内容"
-  },
-  {
-    "objectID": "intro.html#余談",
-    "href": "intro.html#余談",
-    "title": "1  イントロダクション",
-    "section": "1.5 余談…",
-    "text": "1.5 余談…\n大学院のゼミもやってます。\n\nが，会計学領域は深刻な研究者不足です。\n\n\n\n東京や京都に経営学研究科がない事もあり，経営学者は主に神戸と一橋という旧高等商業学校から輩出される傾向があります。\n\n研究者養成の使命\n\n\n\n\n\n\n\n神戸大学経営学研究科から\n\n\n\n\nしかし，神戸と一橋でも会計学（特に佐久間の知っている管理会計）の大学院生はすごく減っています。\n博士後期課程にいる大学院生（社会人大学院生を除く）は一橋は知る限り0，神戸は3程度\n日本の学部→修士→アメリカの大学院のようなルートをとる学生もほとんどいない（2人知ってる）\n\n\n\n\n1.5.1 進路面\n\n修士→就職\n\n一般企業\n一部業界（戦略コンサル，専門コンサル，研究所等）は修士卒の方が有利？\n\n\n\n修士→博士→研究者\n\n経営学部・商学部，その他社会科学系，一部理科系学部\n\n\n\n\n修士→アメリカ等の大学院\n\nアメリカの博士課程は，大学と雇用関係（給料が出る）\nトップスクールで生き残れたらトップスクールに就職できる\n\nビジネススクールなら初任給21万ドル程度？\n\n終身雇用権を得る or 米国内外の大学に転職\n\n\n\n\n1.5.2 職業面\n\n\n\n研究者の仕事\n\n研究・教育・その他\n\n勤務形態は基本的に裁量労働\n\n9時5時でスーツ着て出勤しなくても良い\n拘束時間は授業と会議？\n\n研究は競技？\n\nまだ誰もやっていないテーマを探す\n適切なデータを作ったり手に入れたりする\n論文にして審査を受ける\nどのランクの論文雑誌にどんだけ載せたか？\n\n\n\n\n\n\n\n\n\n\n日本の経営学，特に会計学は世界に遅れています\n\n日本の研究者で世界トップ3雑誌に載せた論文は0\n\n厳密にいうと1970年代に数本，ただしアメリカの大学院卒\n\n日本チャンピオンになるチャンスがあります\n\n癖のある職業なので広くお勧めすることはしませんが「そんな選択肢もある」ということを知ってて欲しいです！"
-  },
-  {
-    "objectID": "intro_text.html#ゼミの説明",
-    "href": "intro_text.html#ゼミの説明",
-    "title": "1  イントロダクション",
-    "section": "1.1 ゼミの説明",
-    "text": "1.1 ゼミの説明\n\n\n\n\n\n\n1.1.1 MCS\n\nマネジメント・コントロール・システム（MCS)\n\n企業が目的を達成するために従業員をコントロールする仕組み\n\n\n\n\n\n従業員は\n\nできるだけ辛い思いはしたくない\nできるだけ高い給料は欲しい\n自分の部署の利益＞会社全体の利益\n\n企業は\n\n従業員の働きぶり（努力）を把握して\n努力に報いる\n\n仕組みを通して，従業員の努力の方向を会社の目標に向かったものにして，なおかつ努力量を引き出したい\n\n\n\n\n\nでも，マネジメントコントロールの仕組みを作って運用することは実際には難しい\n\nそもそも努力を直接測ることは難しい\nメインで使われる会計の数値は，そもそも別目的（財務会計目的）で作られている\n顧客満足度などの会計以外の数値データもあるけれど財務的成果に結びつくかどうか検証するのは難しい\n予算などの仕組みは従業員の努力を測る目的以外でも使われるので，意図しない従業員の反応を生んでしまう事も\n\n\n\n\n\n\n\n\n1.1.2 データ分析\nマネジメントコントロールは，会社のデータを使う。\n\n\n\n会計数値\n顧客満足度\n歩留率\n回転率\n市場シェア\n\n\n\n\n\n\n\n\n\nこれらのデータから，何かしらの判断をしたり，従業員の働きぶりを評価したりする。\n\n顧客満足度は財務的成果につながっている？\n営業担当者のどんな行動が成果につながりやすい？\nどんな店長が「優秀」？\n\nこれらの疑問に答えるためには，結構高度なデータ分析スキルが求められる。\n\n\n1.1.3 「MCS × データ分析」\n\n会社にはどんなデータがあって，それぞれが何を表しているのか？\n従業員をコントロールするためにどんな仕組みが必要なのか？\n\nといったMCSの知識と\n\nデータ同士にどんな関係があるのか？\nMCSの仕組みはうまくいっているのか？\n\nといったことを検証するデータ分析のスキルを組み合わせて使えるようになって欲しいなぁ。。。"
-  },
-  {
-    "objectID": "intro_text.html#進め方",
-    "href": "intro_text.html#進め方",
-    "title": "1  イントロダクション",
-    "section": "1.2 進め方",
-    "text": "1.2 進め方\nできたら…\n\n会計のテキスト 40分\nRのテキスト 40分\n面白い会社，取組の紹介 10分\n\n\n\n\n\n\n\n\n\n1.2.1 教科書\n\n\n「現場が動き出す会計」\n伊丹敬之 ・青木康晴 (2016)\n日経BPマーケティング(日本経済新聞出版)\n\n「Rによる実証分析 (第2版)」\n星野匡郎・田中久稔・北川梨津 (2023)\nオーム社\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1.2.2 皆さんの作業\n\n発表者\n\n発表資料を作ってきて，前日までにアップロードしてください。\n発表時間の目安は30分\n読んだことのない方もわかるように\nほかの教科書や，その章で扱われている内容の専門書等，自分で探してきた事例などで必要に応じて補足してください\nスライド形式を基本としますが，場合によってはノートブック形式などでも\n\n\n\nPowerPoint\nKeynote\nGoogle Slides\nQuarto (Rの方の時おすすめ）\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nちなみにこのスライドはQuartoで作っています\n\n\n\n\n\nRの本では，コードとその実行結果を実演してほしいです\n\n\n\n発表者以外\n\n該当する章に目を通してきてください\nわからないところがあっても事前に調べてくる必要はありません（当日質問してください）\n自分で読んできて，発表者の発表内容を聞いて分からなかったことや，疑問に思ったことを質問・コメントしてください。\nRの方は自分のパソコンでもコードを動かしてもらいたいので，パソコンは持ってきてください\n\n\n\n\n話題提供係\n\nニュースや雑誌記事，自分の周りで起こったこと等，経営学に関連する何かを見つけてきて話してください。\n3分程度\nどんな内容で，どんなところが興味深かったかを教えてください。\n必要に応じて記事のリンクや資料など用意してください。"
-  },
-  {
-    "objectID": "intro_text.html#ゼミで使うツールについて",
-    "href": "intro_text.html#ゼミで使うツールについて",
-    "title": "1  イントロダクション",
-    "section": "1.3 ゼミで使うツールについて",
-    "text": "1.3 ゼミで使うツールについて\n\n\n\nZulip\n\nゼミ全体やグループ研究等の際の連絡用\n\nNotion\n\n\nゼミの決まりやツールの使い方などをwiki的に活用\nグループ研究や卒論の置き場としても\n場合によってはグループ研究のアイデアメモにも？\n\n\ngoogle drive\n\n発表資料の共有や，共同編集用\n\nRとRstudio\n\n統計分析とその結果のレポート。場合によってはスライドや卒論も書けます。\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1.3.1 Zulip\n\nチャットアプリ。連絡は基本これで\nグループチャットのstreamと個人間のやり取り用のprivateメッセージがある\n\n質問や意見などは基本的には適したサイズのstreamで\n個人的な事情を含む連絡はprivateメッセージで\n\n発表ファイルとかは，google driveの適したフォルダに入れて，そのリンクをzulipに貼ってください\n\n\n\n\n1.3.2 Notion\n\nしばらくは佐久間が更新してみます。\n大学のアドレスで登録すると，有料プランをタダで使えますし，別に無料プランでも大丈夫です。\nzulipの使い方，notionの使い方，Rの使い方などをとりあえずまとめつつありますが，需要に応じて書き足していきます。\n\n\n\n\n1.3.3 Google Drive\n\nクラウドストレージ\n基本的に発表とかのファイル類はここに保存します\nグループで文書とかスライドを共同編集する時にも便利かも\n\n\n\n\n1.3.4 RとRstudio\n\n統計用言語とそれを使いやすくするなんか\n詳しくは来週お話しします\n分析だけでなく，結果のレポートも書けます\nなんなら，論文やスライドも作れます"
-  },
-  {
-    "objectID": "intro_text.html#発表の担当決め",
-    "href": "intro_text.html#発表の担当決め",
-    "title": "1  イントロダクション",
-    "section": "1.4 発表の担当決め",
-    "text": "1.4 発表の担当決め\n次回（4/18）はRの使い方を説明するので，来週からです。\nスケジュールと内容"
-  },
-  {
-    "objectID": "intro_text.html#余談",
-    "href": "intro_text.html#余談",
-    "title": "1  イントロダクション",
-    "section": "1.5 余談…",
-    "text": "1.5 余談…\n大学院のゼミもやってます。\n\nが，会計学領域は深刻な研究者不足です。\n\n\n\n東京や京都に経営学研究科がない事もあり，経営学者は主に神戸と一橋という旧高等商業学校から輩出される傾向があります。\n\n研究者養成の使命\n\n\n\n\n\n\n\n神戸大学経営学研究科から\n\n\n\n\nしかし，神戸と一橋でも会計学（特に佐久間の知っている管理会計）の大学院生はすごく減っています。\n博士後期課程にいる大学院生（社会人大学院生を除く）は一橋は知る限り0，神戸は3程度\n日本の学部→修士→アメリカの大学院のようなルートをとる学生もほとんどいない（2人知ってる）\n\n\n\n\n1.5.1 進路面\n\n修士→就職\n\n一般企業\n一部業界（戦略コンサル，専門コンサル，研究所等）は修士卒の方が有利？\n\n\n\n修士→博士→研究者\n\n経営学部・商学部，その他社会科学系，一部理科系学部\n\n\n\n\n修士→アメリカ等の大学院\n\nアメリカの博士課程は，大学と雇用関係（給料が出る）\nトップスクールで生き残れたらトップスクールに就職できる\n\nビジネススクールなら初任給21万ドル程度？\n\n終身雇用権を得る or 米国内外の大学に転職\n\n\n\n\n1.5.2 職業面\n\n\n\n研究者の仕事\n\n研究・教育・その他\n\n勤務形態は基本的に裁量労働\n\n9時5時でスーツ着て出勤しなくても良い\n拘束時間は授業と会議？\n\n研究は競技？\n\nまだ誰もやっていないテーマを探す\n適切なデータを作ったり手に入れたりする\n論文にして審査を受ける\nどのランクの論文雑誌にどんだけ載せたか？\n\n\n\n\n\n\n\n\n\n\n日本の経営学，特に会計学は世界に遅れています\n\n日本の研究者で世界トップ3雑誌に載せた論文は0\n\n厳密にいうと1970年代に数本，ただしアメリカの大学院卒\n\n日本チャンピオンになるチャンスがあります\n\n癖のある職業なので広くお勧めすることはしませんが「そんな選択肢もある」ということを知ってて欲しいです！"
+    "objectID": "ch3.html#準備パッケージのロード",
+    "href": "ch3.html#準備パッケージのロード",
+    "title": "3  統計3章",
+    "section": "準備：パッケージのロード",
+    "text": "準備：パッケージのロード\n\n\nCode\nrm(list=ls()); gc();  gc(); #前の作業など，rのメモリに入っているものをリセットするコマンド\nif (!require(\"pacman\")) install.packages(\"pacman\") #パッケージ管理用のパッケージであるpacmanが入っていない場合はインストール\npacman::p_load(tidyverse, magrittr)"
   },
   {
     "objectID": "ch3.html#問題3.1",
@@ -182,32 +140,32 @@
     "text": "問題3.1\n2つの確率変数X,Yについて，XとYが独立であるとき\n\n1. \\(\\textrm{Var}(X+Y)\\)\n\\[\n\\begin{split}\nVar(X+Y) &= Cov(X+Y)(X+Y) \\\\\n&=Cov(X,X)+Cov(Y,Y)+2Cov(X,Y) \\\\\n&= Var(X) + Var(Y)\n\\end{split}\n\\]\n\n\n2. \\(\\textrm{Var}(X-Y)\\)\n\\(Z = -Y\\)とすると，\n\\[\nVar(Z) = Var(-Y) = (-1)^2Var(Y) = Var(Y)\n\\]\nこれを利用して\n\\[\\begin{split}\nVar(X+Z) &= Cov(X+Z)(X+Z) \\\\\n&=Cov(X,X)+Cov(Y,Y)+2Cov(X,Z) \\\\\n&= Var(X) + Var(Z) \\\\\n&= Var(X) + Var(Y)\n\\end{split}\\]"
   },
   {
-    "objectID": "ch3.html#問題-3.2",
-    "href": "ch3.html#問題-3.2",
-    "title": "3  3章",
-    "section": "3.2 問題 3.2",
-    "text": "3.2 問題 3.2\nデータの読み込み\n\ntempdata <- read_csv(\"R_EmpiricalAnalysis_csv/chap03/temperature.csv\")\n\n\n項目tempの全てを用いて，2014年の東京都の平均気温を計算\n\n\ntempdata %$% \n  mean(temp)\n\n[1] 16.64065\n\n\n\n抽出し，計算\n\n\nsub <- tempdata %>% \n  slice(1:100) #slice:データを指定の範囲で切り取る\nmean(sub$temp)\n\n[1] 7.204\n\n\n\nランダム抽出\n\n\nsub2 <- tempdata %>% \n  slice_sample(n = 100)\nmean(sub2$temp)\n\n[1] 18.126"
+    "objectID": "ch3.html#問題3.2",
+    "href": "ch3.html#問題3.2",
+    "title": "3  統計3章",
+    "section": "問題3.2",
+    "text": "問題3.2\n\nデータの読み込み\n\n\n\nCode\ntempdata &lt;- read_csv(\"R_EmpiricalAnalysis_csv/chap03/temperature.csv\")\ntempdata\n\n\n\n\n  \n\n\n\n\n\n項目tempの全てを用いて，2014年の東京都の平均気温を計算\n\n\n\nCode\ntempdata %$% \n  mean(temp)\n\n\n[1] 16.64065\n\n\n\n抽出し，計算\n\n\n\nCode\nsub &lt;- tempdata %&gt;% \n  slice(1:100) #slice:データを指定の範囲で切り取る\nmean(sub$temp)\n\n\n[1] 7.204\n\n\n\nランダム抽出\n\n\n\nCode\nsub2 &lt;- tempdata %&gt;% \n  slice_sample(n = 100)\nmean(sub2$temp)\n\n\n[1] 13.93"
   },
   {
     "objectID": "ch3.html#問題3.3",
     "href": "ch3.html#問題3.3",
     "title": "3  統計3章",
     "section": "問題3.3",
-    "text": "問題3.3\n\nデータの読み込み\n\nicedata &lt;- read_csv(\"R_EmpiricalAnalysis_csv/chap03/icecream.csv\")\nicedata\n\n\n\n  \n\n\n\n\n\n\n1. データのうち，都市名とアイスクリーム消費額のみを取り出して，順番を変える\n\nicedata %&gt;% \n  dplyr::select(city,icecream) %&gt;% #都市名とアイスクリームを取り出し\n  arrange(-icecream) #アイスクリームの降順で並び替え(-は降順の意味)\n\n\n\n  \n\n\n\n教科書ではこの方法\n\nicedata%$%\n  which.max(icecream) \n\n[1] 17\n\n\n\n\n\n2. アイスクリームと所得の散布図と相関係数\n\nicedata %$%\n  plot(icecream,income)  \n\n\n\nicedata %$%\n    cor(icecream,income)\n\n[1] 0.3113555\n\n\n\n\n\n3. アイスクリームと15歳以下の子供の人数\n\nicedata %$%\n  plot(icecream,u15)  \n\n\n\nicedata %$%\n    cor(icecream,u15)\n\n[1] -0.05910997"
+    "text": "問題3.3\n\nデータの読み込み\n\n\nCode\nicedata &lt;- read_csv(\"R_EmpiricalAnalysis_csv/chap03/icecream.csv\")\nicedata\n\n\n\n\n  \n\n\n\n\n\n\n1. データのうち，都市名とアイスクリーム消費額のみを取り出して，順番を変える\n\n\nCode\nicedata %&gt;% \n  dplyr::select(city,icecream) %&gt;% #都市名とアイスクリームを取り出し\n  arrange(-icecream) #アイスクリームの降順で並び替え(-は降順の意味)\n\n\n\n\n  \n\n\n\n教科書ではこの方法\n\n\nCode\nicedata%$%\n  which.max(icecream) \n\n\n[1] 17\n\n\n\n\n\n2. アイスクリームと所得の散布図と相関係数\n\n\nCode\nicedata %$%\n  plot(icecream,income)  \n\n\n\n\n\nCode\nicedata %$%\n    cor(icecream,income)\n\n\n[1] 0.3113555\n\n\n\n\n\n3. アイスクリームと15歳以下の子供の人数\n\n\nCode\nicedata %$%\n  plot(icecream,u15)  \n\n\n\n\n\nCode\nicedata %$%\n    cor(icecream,u15)\n\n\n[1] -0.05910997"
   },
   {
     "objectID": "ch3.html#問題3.4",
     "href": "ch3.html#問題3.4",
     "title": "3  統計3章",
     "section": "問題3.4",
-    "text": "問題3.4\n\n\n1\n\nS &lt;- 1000\nX &lt;- rnorm(S, 50, 10)\nrec &lt;- numeric(S)\n\nfor(i in 1:S){\n  rec[i] &lt;- (10 &lt; X[i])\n}\nmean(rec)\n\n[1] 1\n\n\n\n2\n\nS &lt;- 1000\nX &lt;- rnorm(S, 50, 10)\nrec &lt;- numeric(S)\n\nfor(i in 1:S){\n  rec[i] &lt;- (-10 &lt; X[i]) & (X[i] &lt; 10)\n}\nmean(rec)\n\n[1] 0\n\n\n\n3\n\nS &lt;- 1000\nX &lt;- rnorm(S, 50, 10)\nY &lt;- rnorm(S, 50, 10)\nrec &lt;- numeric(S)\n\nfor(i in 1:S){\n  rec[i] &lt;- (Y[i])^2 &lt; X[i]\n}\nmean(rec)\n\n[1] 0"
+    "text": "問題3.4\n\n\n1\n\n\nCode\nS &lt;- 1000\nX &lt;- rnorm(S, 50, 10)\nrec &lt;- numeric(S)\n\nfor(i in 1:S){\n  rec[i] &lt;- (10 &lt; X[i])\n}\nmean(rec)\n\n\n[1] 1\n\n\n\n2\n\n\nCode\nS &lt;- 1000\nX &lt;- rnorm(S, 50, 10)\nrec &lt;- numeric(S)\n\nfor(i in 1:S){\n  rec[i] &lt;- (-10 &lt; X[i]) & (X[i] &lt; 10)\n}\nmean(rec)\n\n\n[1] 0\n\n\n\n3\n\n\nCode\nS &lt;- 1000\nX &lt;- rnorm(S, 50, 10)\nY &lt;- rnorm(S, 50, 10)\nrec &lt;- numeric(S)\n\nfor(i in 1:S){\n  rec[i] &lt;- (Y[i])^2 &lt; X[i]\n}\nmean(rec)\n\n\n[1] 0"
   },
   {
     "objectID": "ch3.html#問題3.5",
     "href": "ch3.html#問題3.5",
     "title": "3  統計3章",
     "section": "問題3.5",
-    "text": "問題3.5\n\nS &lt;- 10000\nN &lt;- 10000\n\nrec &lt;- numeric(S)\n\nfor(i in 1:S){\n  X &lt;- rnorm(N,50,10)\n  Xbar &lt;- mean(X)\n  Vn &lt;- var(X)\n  lb &lt;- Xbar - 1.64 * sqrt(Vn / N) \n  ub &lt;- Xbar + 1.64 * sqrt(Vn / N)\n  rec[i] &lt;- (lb &lt; 50) & (ub &gt; 50) \n}\nmean(rec)\n\n[1] 0.8959"
+    "text": "問題3.5\n\n\nCode\nS &lt;- 10000\nN &lt;- 10000\n\nrec &lt;- numeric(S)\n\nfor(i in 1:S){\n  X &lt;- rnorm(N,50,10)\n  Xbar &lt;- mean(X)\n  Vn &lt;- var(X)\n  lb &lt;- Xbar - 1.64 * sqrt(Vn / N) \n  ub &lt;- Xbar + 1.64 * sqrt(Vn / N)\n  rec[i] &lt;- (lb &lt; 50) & (ub &gt; 50) \n}\nmean(rec)\n\n\n[1] 0.9008"
   },
   {
     "objectID": "ch4.html#準備パッケージのロード",
@@ -222,20 +180,6 @@
     "title": "4  統計4章",
     "section": "4.2 問題4.1",
     "text": "4.2 問題4.1\n\n4.2.1 0. データの読み込み\n\ntem_aug &lt;- read_csv(\"R_EmpiricalAnalysis_csv/chap04/temperature_aug.csv\")\ntem_aug\n\n\n\n  \n\n\n\n\n\n4.2.2 1 . 昼間の時間帯を分割\n\ntem_aug %&lt;&gt;%\n  mutate(morning = 1* (6 &lt;= time & time &lt;=12 ),\n         afternoon = 1 * (13 &lt;= time & time &lt;=18 ))\ntem_aug\n\n\n\n  \n\n\n\n\n\n4.2.3 2. 土曜日を表すダミー変数を作成\n\ntem_aug %&lt;&gt;%\n  mutate(date = ymd(date),\n         dow = wday(date,label = TRUE),\n         saturday = 1 * (dow == \"Sat\"))\n\ntem_aug %&lt;&gt;%\n  mutate(sunday = 1 * (dow == \"Sun\"),\n         recess = 1 * (\"2014-08-11\"&lt;=date &\"2014-08-11\"&lt;=date ))\n\n\n  \n#  mutate(saturday = 1 * ((date == \"2014/8/2\")|\n#                         (date == \"2014/8/9\")|\n#                         (date == \"2014/8/16\")|\n#                         (date == \"2014/8/23\")|\n#                         (date == \"2014/8/30\")\n#  ))\n\n\n\n4.2.4 3. 変数を追加して重回帰分析\n\nreg4_1 &lt;-tem_aug %$%\n  lm(elec ~ temp + prec + sunday + recess + morning + afternoon + saturday)\nsummary(reg4_1)\n\n\nCall:\nlm(formula = elec ~ temp + prec + sunday + recess + morning + \n    afternoon + saturday)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-1030.02  -347.04    30.51   319.40  1012.10 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  244.956    153.145   1.600 0.110138    \ntemp         113.321      5.176  21.895  &lt; 2e-16 ***\nprec          14.677     16.730   0.877 0.380621    \nsunday      -409.299     43.531  -9.402  &lt; 2e-16 ***\nrecess      -127.016     36.236  -3.505 0.000484 ***\nmorning      215.088     38.074   5.649 2.30e-08 ***\nafternoon    589.475     40.687  14.488  &lt; 2e-16 ***\nsaturday    -260.407     43.640  -5.967 3.75e-09 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 419.8 on 736 degrees of freedom\nMultiple R-squared:  0.6579,    Adjusted R-squared:  0.6547 \nF-statistic: 202.2 on 7 and 736 DF,  p-value: &lt; 2.2e-16\n\n\n\n電力使用量（elec）に対して，気温（temp）は正の関係\n午前中も午後も正の関係。これは午前でも午後でもない時間（19-5時）と比較していると解釈できる\n\n午後の方がよりたくさん電気を使っている\nmorning と afternoonの差は統計的にも有意（下のコマンド）\n\n土曜は電力消費量が少ない。負の関係\n決定係数は0.614\n\n\nlh_robust(elec ~ temp + prec + sunday + recess + morning + afternoon + saturday,\n            data = tem_aug,\n            linear_hypothesis = \"morning = afternoon\") %&gt;% \n  summary\n\n$lm_robust\n\nCall:\nlh_robust(elec ~ temp + prec + sunday + recess + morning + afternoon + \n    saturday, data = tem_aug, linear_hypothesis = \"morning = afternoon\")\n\nStandard error type:  HC2 \n\nCoefficients:\n            Estimate Std. Error t value  Pr(&gt;|t|)  CI Lower CI Upper  DF\n(Intercept)   244.96    146.246   1.675 9.437e-02  -42.1531   532.06 736\ntemp          113.32      4.923  23.020 9.656e-89  103.6567   122.99 736\nprec           14.68      7.662   1.916 5.579e-02   -0.3639    29.72 736\nsunday       -409.30     37.482 -10.920 7.855e-26 -482.8845  -335.71 736\nrecess       -127.02     37.099  -3.424 6.520e-04 -199.8492   -54.18 736\nmorning       215.09     40.931   5.255 1.942e-07  134.7322   295.44 736\nafternoon     589.47     35.809  16.462 4.465e-52  519.1750   659.77 736\nsaturday     -260.41     38.882  -6.697 4.215e-11 -336.7395  -184.07 736\n\nMultiple R-squared:  0.6579 ,   Adjusted R-squared:  0.6547 \nF-statistic: 284.9 on 7 and 736 DF,  p-value: &lt; 2.2e-16\n\n$lh\n                    Estimate Std. Error t value  Pr(&gt;|t|) CI Lower CI Upper  DF\nmorning = afternoon   -374.4      36.46  -10.27 3.259e-23     -446   -302.8 736\n\n\n\ntem_aug %&lt;&gt;%\n  mutate(daytime = 1 * (time&gt;=9 & time&lt;=18)\n         )\n\nreg4_0 &lt;- tem_aug %$%\n  lm(elec ~ temp + prec + sunday + recess + daytime) \nres &lt;- list(reg4_0,reg4_1)\nmsummary(res)\n\n\n\n\n\n (1)\n  (2)\n\n\n\n\n(Intercept)\n340.566\n244.956\n\n\n\n(145.412)\n(153.145)\n\n\ntemp\n106.960\n113.321\n\n\n\n(4.968)\n(5.176)\n\n\nprec\n3.500\n14.677\n\n\n\n(16.104)\n(16.730)\n\n\nsunday\n−361.068\n−409.299\n\n\n\n(40.792)\n(43.531)\n\n\nrecess\n−126.891\n−127.016\n\n\n\n(34.517)\n(36.236)\n\n\ndaytime\n581.319\n\n\n\n\n(32.808)\n\n\n\nmorning\n\n215.088\n\n\n\n\n(38.074)\n\n\nafternoon\n\n589.475\n\n\n\n\n(40.687)\n\n\nsaturday\n\n−260.407\n\n\n\n\n(43.640)\n\n\nNum.Obs.\n744\n744\n\n\nR2\n0.683\n0.658\n\n\nR2 Adj.\n0.681\n0.655\n\n\nAIC\n11048.1\n11108.4\n\n\nBIC\n11080.4\n11149.9\n\n\nLog.Lik.\n−5517.053\n−5545.210\n\n\nRMSE\n402.00\n417.51\n\n\n\n\n\n\n\n決定係数はむしろ下がる？"
-  },
-  {
-    "objectID": "ch3.html#準備パッケージのロード",
-    "href": "ch3.html#準備パッケージのロード",
-    "title": "3  統計3章",
-    "section": "準備：パッケージのロード",
-    "text": "準備：パッケージのロード\n\nrm(list=ls()); gc();  gc(); #前の作業など，rのメモリに入っているものをリセットするコマンド\nif (!require(\"pacman\")) install.packages(\"pacman\") #パッケージ管理用のパッケージであるpacmanが入っていない場合はインストール\npacman::p_load(tidyverse, magrittr)"
-  },
-  {
-    "objectID": "ch3.html#問題3.2",
-    "href": "ch3.html#問題3.2",
-    "title": "3  統計3章",
-    "section": "問題3.2",
-    "text": "問題3.2\n\nデータの読み込み\n\n\ntempdata &lt;- read_csv(\"R_EmpiricalAnalysis_csv/chap03/temperature.csv\")\ntempdata\n\n\n\n  \n\n\n\n\n\n項目tempの全てを用いて，2014年の東京都の平均気温を計算\n\n\ntempdata %$% \n  mean(temp)\n\n[1] 16.64065\n\n\n\n抽出し，計算\n\n\nsub &lt;- tempdata %&gt;% \n  slice(1:100) #slice:データを指定の範囲で切り取る\nmean(sub$temp)\n\n[1] 7.204\n\n\n\nランダム抽出\n\n\nsub2 &lt;- tempdata %&gt;% \n  slice_sample(n = 100)\nmean(sub2$temp)\n\n[1] 17.552"
   },
   {
     "objectID": "ch4.html#問題4.2",
@@ -256,14 +200,7 @@
     "href": "ch5.html#統計的仮設検定の考え方",
     "title": "5  推測統計の基礎",
     "section": "5.1 1. 統計的仮設検定の考え方",
-    "text": "5.1 1. 統計的仮設検定の考え方\nいわゆる回帰分析では，\n\\[\nY = \\beta_0 + \\beta_1 X_1 + ...+\\beta_dX_d + \\epsilon\n\\]\nと言った線形構造を仮定して，OLS（最小二乗法）という方法で \\(\\beta\\)の推定値\\(\\hat \\beta\\)を推定しました。この\\(\\beta\\) は，説明変数\\(X\\)が\\(Y\\)とどのように関わっているのかを表します。しかし，\\(\\hat \\beta\\)はサンプルを使って推定した推定値です。母集団のパラメータである\\(\\beta\\)とは必ずしも一致するとは限りません。しかし，中心極限定理などの確率の性質を利用すると，\\(\\hat \\beta\\)がどの程度の誤差を持って推定されたのかがわかります。特に回帰分析では想定される誤差の中に0が入っているかが重要です。 \\(\\beta\\)が0かもしれないということは，その独立変数\\(X\\)が\\(Y\\)と関係ないかもしれない，ということを意味しているからです。\n\n\n\n\n\n\nYとXに関係がある\n\n\n\n\n\n\n\nYとXに関係がない\n\n\n\n\n\n\n5.1.1 統計的仮説検定\nこのように，回帰係数に意味があるのか，についての検証は統計的仮説検定と言います。これは別に回帰分析に限ったものではなく，母集団から抽出されたサンプルを使ってなんらかの検証を行う際に広く使われます。\n例えばコイントスの例です。歪みのない1コインを投げた場合，表が出る確率は1/2です。今手元にあるコインが歪みのないものかどうかを検証するためには，「歪みがない」ことを仮説として持ちます。これを帰無仮説と言います。逆にこの仮説が否定されたもの「コインが歪んでいる」という仮説を対立仮説と言います。\nこれらの仮説を以下のプロセスで検討します。\n\nどれぐらいの確率なら仮説を否定するか，という基準を先に決めておく。この基準を有意水準という。\n母集団の確率分布について，帰無仮説を立てる\n母集団からサンプルを取得する\n母集団から抽出したサンプルが母集団から得られる確率を計算し，1で決めた有意水準と比較する。優位水準より低い確率だった場合，帰無仮説が真実ではなかったとして棄却する。有意水準より大きかった場合，仮説を受容する。\n\n\n\n5.1.2 コイン投げのシミュレーション\n\n有意水準は（経済学や経営学では）5％や10％あたりが用いられます。5％としてみます。\n帰無仮説を設定する。コインを投げて表になる確率を\\(p\\) とすると，帰無仮説\\(H_0\\)は \\(p = \\frac{1}{2}\\)，対立仮説\\(H_1\\)は \\(p \\ne \\frac{1}{2}\\)と設定。\nコインを100回投げる。結果が表65，裏35だとする\n帰無仮説が正しいとして，100回中おもてが60-40回に収まる確率を計算してみる\n\n\n1p40 &lt;- pbinom(q = 40, size = 100, prob = 0.5)\n2p60 &lt;- pbinom(q = 60, size = 100, prob = 0.5)\np60-p40\n\n\n1\n\n表が40回以下の確率\n\n2\n\n表が60回以下の確率\n\n\n\n\n[1] 0.9539559\n\n\nこの0.9539は，コインを100回投げて，60回から40回表が出る確率を表しています。95％以上の確率で60-40会表が出る，逆に65回は5％以下と解釈できます。事前に設定された有意水準5％を下回るので，帰無仮説は棄却され，対立仮説である\\(H_1\\)の\\(p \\ne \\frac{1}{2}\\)が採択されます。\n\n\n5.1.3 回帰分析と統計的仮説検定\n\n回帰分析についても同じ考え方で検定をします。\n一般的には，説明変数が従属変数と関係ない，つまり係数\\(\\beta = 0\\) を帰無仮説として検定します。"
-  },
-  {
-    "objectID": "ch5.html#footnotes",
-    "href": "ch5.html#footnotes",
-    "title": "5  推測統計の基礎",
-    "section": "",
-    "text": "高校数学でやりましたか？歪んだコインって見たことないですよね。↩︎"
+    "text": "5.1 1. 統計的仮設検定の考え方\nいわゆる回帰分析では，\n\\[\nY = \\beta_0 + \\beta_1 X_1 + ...+\\beta_dX_d + \\epsilon\n\\]\nと言った線形構造を仮定して，OLS（最小二乗法）という方法で \\(\\beta\\)の推定値\\(\\hat \\beta\\)を推定しました。この\\(\\beta\\) は，説明変数\\(X\\)が\\(Y\\)とどのように関わっているのかを表します。しかし，\\(\\hat \\beta\\)はサンプルを使って推定した推定値です。母集団のパラメータである\\(\\beta\\)とは必ずしも一致するとは限りません。しかし，中心極限定理などの確率の性質を利用すると，\\(\\hat \\beta\\)がどの程度の誤差を持って推定されたのかがわかります。特に回帰分析では想定される誤差の中に0が入っているかが重要です。 \\(\\beta\\)が0かもしれないということは，その独立変数\\(X\\)が\\(Y\\)と関係ないかもしれない，ということを意味しているからです。\n\n\n\n\n\n\nYとXに関係がある\n\n\n\n\n\n\n\nYとXに関係がない\n\n\n\n\n\n\n5.1.1 統計的仮説検定\nこのように，回帰係数に意味があるのか，についての検証は統計的仮説検定と言います。これは別に回帰分析に限ったものではなく，母集団から抽出されたサンプルを使ってなんらかの検証を行う際に広く使われます。\n例えばコイントスの例です。歪みのない1コインを投げた場合，表が出る確率は1/2です。今手元にあるコインが歪みのないものかどうかを検証するためには，「歪みがない」ことを仮説として持ちます。これを帰無仮説と言います。逆にこの仮説が否定されたもの「コインが歪んでいる」という仮説を対立仮説と言います。\nこれらの仮説を以下のプロセスで検討します。\n\nどれぐらいの確率なら仮説を否定するか，という基準を先に決めておく。この基準を有意水準という。\n母集団の確率分布について，帰無仮説を立てる\n母集団からサンプルを取得する\n母集団から抽出したサンプルが母集団から得られる確率を計算し，1で決めた有意水準と比較する。優位水準より低い確率だった場合，帰無仮説が真実ではなかったとして棄却する。有意水準より大きかった場合，仮説を受容する。\n\n\n\n5.1.2 コイン投げのシミュレーション\n\n有意水準は（経済学や経営学では）5％や10％あたりが用いられます。5％としてみます。\n帰無仮説を設定する。コインを投げて表になる確率を\\(p\\) とすると，帰無仮説\\(H_0\\)は \\(p = \\frac{1}{2}\\)，対立仮説\\(H_1\\)は \\(p \\ne \\frac{1}{2}\\)と設定。\nコインを100回投げる。結果が表65，裏35だとする\n帰無仮説が正しいとして，100回中おもてが60-40回に収まる確率を計算してみる\n\n\n\nCode\n1p40 &lt;- pbinom(q = 40, size = 100, prob = 0.5)\n2p60 &lt;- pbinom(q = 60, size = 100, prob = 0.5)\np60-p40\n\n\n\n1\n\n表が40回以下の確率\n\n2\n\n表が60回以下の確率\n\n\n\n\n[1] 0.9539559\n\n\nこの0.9539は，コインを100回投げて，60回から40回表が出る確率を表しています。95％以上の確率で60-40会表が出る，逆に65回は5％以下と解釈できます。事前に設定された有意水準5％を下回るので，帰無仮説は棄却され，対立仮説である\\(H_1\\)の\\(p \\ne \\frac{1}{2}\\)が採択されます。\n\n\n5.1.3 回帰分析と統計的仮説検定\n\n回帰分析についても同じ考え方で検定をします。\n一般的には，説明変数が従属変数と関係ない，つまり係数\\(\\beta = 0\\) を帰無仮説として検定します。"
   },
   {
     "objectID": "ch5.html#平均値の検定",
@@ -277,6 +214,13 @@
     "href": "ch5.html#練習問題",
     "title": "5  推測統計の基礎",
     "section": "5.3 練習問題",
-    "text": "5.3 練習問題\n\n5.3.1 5.1\n\n1.\n\nicecream %$%\n  lm(icecream ~ income + u15) %&gt;% \n  summary()\n\n\nCall:\nlm(formula = icecream ~ income + u15)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-1665.6  -478.8  -118.6   613.2  2039.1 \n\nCoefficients:\n              Estimate Std. Error t value Pr(&gt;|t|)   \n(Intercept)  7.223e+03  2.114e+03   3.417  0.00134 **\nincome       6.424e-04  2.830e-04   2.270  0.02795 * \nu15         -8.795e+03  1.476e+04  -0.596  0.55403   \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 871.7 on 46 degrees of freedom\nMultiple R-squared:  0.1039,    Adjusted R-squared:  0.0649 \nF-statistic: 2.666 on 2 and 46 DF,  p-value: 0.08028\n\n\n\n\n2.\n\nresult1 &lt;- icecream %$%\n  lm(icecream ~ income + u15)\n\nmsummary(result1,\n         statistic = \" [{conf.low}, {conf.high}]\")\n\n\n\n\n\n (1)\n\n\n\n\n(Intercept)\n7222.763\n\n\n\n[2967.362, 11478.165]\n\n\nincome\n0.001\n\n\n\n[0.000, 0.001]\n\n\nu15\n−8795.471\n\n\n\n[−38495.860, 20904.918]\n\n\nNum.Obs.\n49\n\n\nR2\n0.104\n\n\nR2 Adj.\n0.065\n\n\nAIC\n807.5\n\n\nBIC\n815.0\n\n\nLog.Lik.\n−399.730\n\n\nRMSE\n844.57\n\n\n\n\n\n\n\n\n\n\n5.3.2 5.2\n\ntem_aug &lt;- read_csv(\"R_EmpiricalAnalysis_csv/chap04/temperature_aug.csv\")\ntem_aug\n\n\n\n  \n\n\n\n\ntem_aug %&lt;&gt;%\n  mutate(morning = 1* (6 &lt;= time & time &lt;=12 ),\n         afternoon = 1 * (13 &lt;= time & time &lt;=18 ))\ntem_aug\n\n\n\n  \n\n\n\n\ntem_aug %&lt;&gt;%\n  mutate(date = ymd(date),\n         dow = wday(date,label = TRUE),\n         saturday = 1 * (dow == \"Sat\"))\n\ntem_aug %&lt;&gt;%\n  mutate(sunday = 1 * (dow == \"Sun\"),\n         recess = 1 * (\"2014-08-11\"&lt;=date &\"2014-08-11\"&lt;=date ))\n\n\n  \n#  mutate(saturday = 1 * ((date == \"2014/8/2\")|\n#                         (date == \"2014/8/9\")|\n#                         (date == \"2014/8/16\")|\n#                         (date == \"2014/8/23\")|\n#                         (date == \"2014/8/30\")\n#  ))\n\n\nreg4_1 &lt;-tem_aug %$%\n  lm(elec ~ temp + prec + sunday + recess + morning + afternoon + saturday)\nsummary(reg4_1)\n\n\nCall:\nlm(formula = elec ~ temp + prec + sunday + recess + morning + \n    afternoon + saturday)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-1030.02  -347.04    30.51   319.40  1012.10 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  244.956    153.145   1.600 0.110138    \ntemp         113.321      5.176  21.895  &lt; 2e-16 ***\nprec          14.677     16.730   0.877 0.380621    \nsunday      -409.299     43.531  -9.402  &lt; 2e-16 ***\nrecess      -127.016     36.236  -3.505 0.000484 ***\nmorning      215.088     38.074   5.649 2.30e-08 ***\nafternoon    589.475     40.687  14.488  &lt; 2e-16 ***\nsaturday    -260.407     43.640  -5.967 3.75e-09 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 419.8 on 736 degrees of freedom\nMultiple R-squared:  0.6579,    Adjusted R-squared:  0.6547 \nF-statistic: 202.2 on 7 and 736 DF,  p-value: &lt; 2.2e-16\n\nmsummary(reg4_1,\n         statistic = \" [{conf.low}, {conf.high}]\")\n\n\n\n\n\n (1)\n\n\n\n\n(Intercept)\n244.956\n\n\n\n[−55.697, 545.609]\n\n\ntemp\n113.321\n\n\n\n[103.160, 123.482]\n\n\nprec\n14.677\n\n\n\n[−18.168, 47.522]\n\n\nsunday\n−409.299\n\n\n\n[−494.759, −323.839]\n\n\nrecess\n−127.016\n\n\n\n[−198.154, −55.879]\n\n\nmorning\n215.088\n\n\n\n[140.342, 289.835]\n\n\nafternoon\n589.475\n\n\n\n[509.598, 669.351]\n\n\nsaturday\n−260.407\n\n\n\n[−346.080, −174.733]\n\n\nNum.Obs.\n744\n\n\nR2\n0.658\n\n\nR2 Adj.\n0.655\n\n\nAIC\n11108.4\n\n\nBIC\n11149.9\n\n\nLog.Lik.\n−5545.210\n\n\nRMSE\n417.51\n\n\n\n\n\n\n\n\n\n5.3.3 5.3\n\nS &lt;- 10000\nbox &lt;- numeric(S)\n\n\nfor(i in 1:S){\n  x &lt;- rnorm(1000,0,1)\n  y &lt;- 1+5*x+rnorm(1000,0,1)\n  res &lt;- lm(y~x) %&gt;% summary() %&gt;% tidy()\n  beta1 &lt;- res$estimate[2]\n  sigma1 &lt;-res$std.error[2]\n  box[i] &lt;- (abs(beta1 -5) &lt; 1.96 * sigma1)\n}\nmean(box)\n\n[1] 0.9526"
+    "text": "5.3 練習問題\n\n5.3.1 5.1\n\n1.\n\n\nCode\nicecream %$%\n  lm(icecream ~ income + u15) %&gt;% \n  summary()\n\n\n\nCall:\nlm(formula = icecream ~ income + u15)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-1665.6  -478.8  -118.6   613.2  2039.1 \n\nCoefficients:\n              Estimate Std. Error t value Pr(&gt;|t|)   \n(Intercept)  7.223e+03  2.114e+03   3.417  0.00134 **\nincome       6.424e-04  2.830e-04   2.270  0.02795 * \nu15         -8.795e+03  1.476e+04  -0.596  0.55403   \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 871.7 on 46 degrees of freedom\nMultiple R-squared:  0.1039,    Adjusted R-squared:  0.0649 \nF-statistic: 2.666 on 2 and 46 DF,  p-value: 0.08028\n\n\n\n\n2.\n\n\nCode\nresult1 &lt;- icecream %$%\n  lm(icecream ~ income + u15)\n\nmsummary(result1,\n         statistic = \" [{conf.low}, {conf.high}]\")\n\n\n\n\n\n\n (1)\n\n\n\n\n(Intercept)\n7222.763\n\n\n\n[2967.362, 11478.165]\n\n\nincome\n0.001\n\n\n\n[0.000, 0.001]\n\n\nu15\n−8795.471\n\n\n\n[−38495.860, 20904.918]\n\n\nNum.Obs.\n49\n\n\nR2\n0.104\n\n\nR2 Adj.\n0.065\n\n\nAIC\n807.5\n\n\nBIC\n815.0\n\n\nLog.Lik.\n−399.730\n\n\nF\n2.666\n\n\nRMSE\n844.57\n\n\n\n\n\n\n\n\n\n\n5.3.2 5.2\n\n\nCode\ntem_aug &lt;- read_csv(\"R_EmpiricalAnalysis_csv/chap04/temperature_aug.csv\")\ntem_aug\n\n\n\n\n  \n\n\n\n\n\nCode\ntem_aug %&lt;&gt;%\n  mutate(morning = 1* (6 &lt;= time & time &lt;=12 ),\n         afternoon = 1 * (13 &lt;= time & time &lt;=18 ))\ntem_aug\n\n\n\n\n  \n\n\n\n\n\nCode\ntem_aug %&lt;&gt;%\n  mutate(date = ymd(date),\n         dow = wday(date,label = TRUE),\n         saturday = 1 * (dow == \"Sat\"))\n\ntem_aug %&lt;&gt;%\n  mutate(sunday = 1 * (dow == \"Sun\"),\n         recess = 1 * (\"2014-08-11\"&lt;=date &\"2014-08-11\"&lt;=date ))\n\n\n  \n#  mutate(saturday = 1 * ((date == \"2014/8/2\")|\n#                         (date == \"2014/8/9\")|\n#                         (date == \"2014/8/16\")|\n#                         (date == \"2014/8/23\")|\n#                         (date == \"2014/8/30\")\n#  ))\n\n\n\n\nCode\nreg4_1 &lt;-tem_aug %$%\n  lm(elec ~ temp + prec + sunday + recess + morning + afternoon + saturday)\nsummary(reg4_1)\n\n\n\nCall:\nlm(formula = elec ~ temp + prec + sunday + recess + morning + \n    afternoon + saturday)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-1030.02  -347.04    30.51   319.40  1012.10 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  244.956    153.145   1.600 0.110138    \ntemp         113.321      5.176  21.895  &lt; 2e-16 ***\nprec          14.677     16.730   0.877 0.380621    \nsunday      -409.299     43.531  -9.402  &lt; 2e-16 ***\nrecess      -127.016     36.236  -3.505 0.000484 ***\nmorning      215.088     38.074   5.649 2.30e-08 ***\nafternoon    589.475     40.687  14.488  &lt; 2e-16 ***\nsaturday    -260.407     43.640  -5.967 3.75e-09 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 419.8 on 736 degrees of freedom\nMultiple R-squared:  0.6579,    Adjusted R-squared:  0.6547 \nF-statistic: 202.2 on 7 and 736 DF,  p-value: &lt; 2.2e-16\n\n\nCode\nmsummary(reg4_1,\n         statistic = \" [{conf.low}, {conf.high}]\")\n\n\n\n\n\n\n (1)\n\n\n\n\n(Intercept)\n244.956\n\n\n\n[−55.697, 545.609]\n\n\ntemp\n113.321\n\n\n\n[103.160, 123.482]\n\n\nprec\n14.677\n\n\n\n[−18.168, 47.522]\n\n\nsunday\n−409.299\n\n\n\n[−494.759, −323.839]\n\n\nrecess\n−127.016\n\n\n\n[−198.154, −55.879]\n\n\nmorning\n215.088\n\n\n\n[140.342, 289.835]\n\n\nafternoon\n589.475\n\n\n\n[509.598, 669.351]\n\n\nsaturday\n−260.407\n\n\n\n[−346.080, −174.733]\n\n\nNum.Obs.\n744\n\n\nR2\n0.658\n\n\nR2 Adj.\n0.655\n\n\nAIC\n11108.4\n\n\nBIC\n11149.9\n\n\nLog.Lik.\n−5545.210\n\n\nF\n202.244\n\n\nRMSE\n417.51\n\n\n\n\n\n\n\n\n\n5.3.3 5.3\n\n\nCode\nS &lt;- 10000\nbox &lt;- numeric(S)\n\n\nfor(i in 1:S){\n  x &lt;- rnorm(1000,0,1)\n  y &lt;- 1+5*x+rnorm(1000,0,1)\n  res &lt;- lm(y~x) %&gt;% summary() %&gt;% tidy()\n  beta1 &lt;- res$estimate[2]\n  sigma1 &lt;-res$std.error[2]\n  box[i] &lt;- (abs(beta1 -5) &lt; 1.96 * sigma1)\n}\nmean(box)\n\n\n[1] 0.9502"
+  },
+  {
+    "objectID": "ch5.html#footnotes",
+    "href": "ch5.html#footnotes",
+    "title": "5  推測統計の基礎",
+    "section": "",
+    "text": "高校数学でやりましたか？歪んだコインって見たことないですよね。↩︎"
   }
 ]

@@ -1,5 +1,10 @@
 ---
 title: "1 イントロダクション"
+format: 
+  revealjs:
+    embed-resources: true
+    number-sections: true
+    chalkboard: false
 ---
 
 # 自己紹介

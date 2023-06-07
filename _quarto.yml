@@ -34,6 +34,12 @@ format:
     embed-resources: true
     df-print: paged
     code-annotations: below
+    code-tools:
+      source: false
+      toggle: false
+      caption: none
+    code-fold: show
+    code-summary: "Code"
   revealjs:
     width: 1280
     height: 1024
@@ -57,5 +63,11 @@ format:
     df-print: paged  
     output-file: revealjs.html
     echo: true  
+    code-tools:
+      source: false
+      toggle: false
+      caption: none
+    code-fold: show
+    code-summary: "Show the code"
 editor: visual
 

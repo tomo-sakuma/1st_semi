@@ -33,7 +33,7 @@
 
 /* other quarto variables */
 :root {
-  --quarto-font-monospace: "JetBrains Mono", monospace;
+  --quarto-font-monospace: "VictorMono", "JetBrains Mono", monospace;
 }
 
 pre > code.sourceCode > span {
