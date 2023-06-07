@@ -144,7 +144,7 @@
     "href": "ch3.html#問題3.2",
     "title": "3  統計3章",
     "section": "問題3.2",
-    "text": "問題3.2\n\nデータの読み込み\n\n\n\nCode\ntempdata &lt;- read_csv(\"R_EmpiricalAnalysis_csv/chap03/temperature.csv\")\ntempdata\n\n\n\n\n  \n\n\n\n\n\n項目tempの全てを用いて，2014年の東京都の平均気温を計算\n\n\n\nCode\ntempdata %$% \n  mean(temp)\n\n\n[1] 16.64065\n\n\n\n抽出し，計算\n\n\n\nCode\nsub &lt;- tempdata %&gt;% \n  slice(1:100) #slice:データを指定の範囲で切り取る\nmean(sub$temp)\n\n\n[1] 7.204\n\n\n\nランダム抽出\n\n\n\nCode\nsub2 &lt;- tempdata %&gt;% \n  slice_sample(n = 100)\nmean(sub2$temp)\n\n\n[1] 13.93"
+    "text": "問題3.2\n\nデータの読み込み\n\n\n\nCode\ntempdata &lt;- read_csv(\"R_EmpiricalAnalysis_csv/chap03/temperature.csv\")\ntempdata\n\n\n\n\n  \n\n\n\n\n\n項目tempの全てを用いて，2014年の東京都の平均気温を計算\n\n\n\nCode\ntempdata %$% \n  mean(temp)\n\n\n[1] 16.64065\n\n\n\n抽出し，計算\n\n\n\nCode\nsub &lt;- tempdata %&gt;% \n  slice(1:100) #slice:データを指定の範囲で切り取る\nmean(sub$temp)\n\n\n[1] 7.204\n\n\n\nランダム抽出\n\n\n\nCode\nsub2 &lt;- tempdata %&gt;% \n  slice_sample(n = 100)\nmean(sub2$temp)\n\n\n[1] 17.905"
   },
   {
     "objectID": "ch3.html#問題3.3",
@@ -165,7 +165,7 @@
     "href": "ch3.html#問題3.5",
     "title": "3  統計3章",
     "section": "問題3.5",
-    "text": "問題3.5\n\n\nCode\nS &lt;- 10000\nN &lt;- 10000\n\nrec &lt;- numeric(S)\n\nfor(i in 1:S){\n  X &lt;- rnorm(N,50,10)\n  Xbar &lt;- mean(X)\n  Vn &lt;- var(X)\n  lb &lt;- Xbar - 1.64 * sqrt(Vn / N) \n  ub &lt;- Xbar + 1.64 * sqrt(Vn / N)\n  rec[i] &lt;- (lb &lt; 50) & (ub &gt; 50) \n}\nmean(rec)\n\n\n[1] 0.9008"
+    "text": "問題3.5\n\n\nCode\nS &lt;- 10000\nN &lt;- 10000\n\nrec &lt;- numeric(S)\n\nfor(i in 1:S){\n  X &lt;- rnorm(N,50,10)\n  Xbar &lt;- mean(X)\n  Vn &lt;- var(X)\n  lb &lt;- Xbar - 1.64 * sqrt(Vn / N) \n  ub &lt;- Xbar + 1.64 * sqrt(Vn / N)\n  rec[i] &lt;- (lb &lt; 50) & (ub &gt; 50) \n}\nmean(rec)\n\n\n[1] 0.8994"
   },
   {
     "objectID": "ch4.html#準備パッケージのロード",
