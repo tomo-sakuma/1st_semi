@@ -17,6 +17,8 @@ book:
     - ch3.qmd
     - ch4.qmd
     - ch5.qmd
+    - ch6.qmd
+    - ch7.qmd
     - references.qmd
 
 bibliography: references.bib
@@ -41,8 +43,8 @@ format:
     code-fold: show
     code-summary: "Code"
   revealjs:
-    width: 1280
-    height: 1024
+    width: 1920  #1280
+    height: 1080 #1024
     slide-number: true
     preview-links: auto
     logo: kobe.png
@@ -69,5 +71,6 @@ format:
       caption: none
     code-fold: show
     code-summary: "Show the code"
+
 editor: visual
 

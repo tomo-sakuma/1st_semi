@@ -1,0 +1,340 @@
+---
+title: "ch7"
+---
+
+## 外生変数と内生変数
+
+回帰分析において，説明変数が内生変数であると，推定された係数の値にバイアスが含まれる（結果がずれる）という問題が起こります。バイアスのせいで，本来関係ないものが関係あると推定されたり，その逆が起こったりするかもしれません。また，本来プラスの関係にあるものをマイナスに推定する，なども起こる可能性があります。
+
+このような推定バイアスは，結果を用いた政策決定の判断を誤ったものにするリスクがあるという意味で深刻です。
+
+統計分析の多くはこの内生変数の問題に取り組むもの，とも解釈できます。今回は外生変数と内生変数がそれぞれ何か，内生変数の問題（内生性）がなぜ起こるのかを考えます。
+
+## 外生変数
+
+$$
+Y_i= \beta_0 + \beta_1 X_i + \epsilon_i 
+$$ {#eq-7-1}
+
+という単回帰分析を考えます（$E[\epsilon_i] = 0$）。ここで，説明変数が外生変数であるとは，$X_i$と誤差項$\epsilon_i$が相関しないことを意味しています。これは，
+
+$$
+\mathrm{E}[X_i\epsilon_i]=\mathrm{Cov}(X_i\epsilon_i) = 0 
+$$ {#eq-7-2}
+
+が成立することを意味し，この性質を外生性 (exogeneity)と言います。
+
+@eq-7-1 の両辺の期待値を取ると
+
+$$
+\begin{split}
+\mathrm{E}[Y_i] &= \beta_0 + \beta_1 \mathrm{E}[X_i] \\
+\beta_0 &= \mathrm{E}[Y_i] - \beta_1 \mathrm{E}[X_i] 
+\end{split}
+$$
+
+となり，これを @eq-7-1 に代入して
+
+$$
+\begin{split}
+Y_i - \mathrm{E}[Y_i] &=  \beta_1 (X_i -\mathrm{E}[X_i]) 
+\end{split}
+$$ {#eq-7-3}
+
+となります。ここで，両辺に$X_i$をかけて期待値をとったら
+
+$$
+\begin{split}
+\mathrm{E}[X_i ( Y_i - \mathrm{E}[Y_i]] &=
+\beta_1\mathrm{E}[X_i ( X_i - \mathrm{E}[X_i]] +
+\mathrm{Cov}(X_i\epsilon_i) \\
+\mathrm{Cov}(X_iY_i) &= \beta_1\mathrm{Var}(X_i)+ \cancel{\mathrm{Cov}(X_i\epsilon_i)} \\
+\beta_1 &=\frac{\mathrm{Cov}(X_iY_i) }{\mathrm{Var}(X_i)}
+\end{split}
+$$ {#eq-7-4}
+
+となります。分散・共分散を標本分散・標本共分散に置き換えることで，実際のデータから$\beta_1$を推定可能です。
+
+もし，調査者が要因$X_i$をランダムに決められる，自然科学の実験のような場合，$X_i$は外生変数になります。以下はサンプルデータToothGrowthです。「モルモットの歯の成長とビタミンCの摂取方法及び量の関係」について調べるためのデータです。
+
+```{r}
+tooth <- ToothGrowth
+tooth
+```
+
+`len`は歯の長さ(mm)，`supp`はビタミンCの摂取方法で，VCはビタミンCを直接与えたもの，OJはオレンジジュースを与えたものを表します。`dose`はビタミンCの量です。
+
+各個体に与えられるビタミンCの量はランダムに決定されます。ここで，ビタミンCの量が歯の長さとどのような関係にあるかを以下の回帰モデルで推定します。
+
+$$
+len = \beta_o + \beta_1dose+ \epsilon
+$$
+
+```{r}
+options(scipen=100)
+options(digits=5)
+pacman::p_load(tidyverse, magrittr,modelsummary)
+tooth %$%
+  lm(len ~ dose) %>% 
+  summary
+```
+
+係数は`9.76`，有意水準は0.1%以下で有意(`***`)です。
+
+## 内生変数
+
+もし， @eq-7-1 の$X_i$が外生変数ではない，つまり$\epsilon_i$と相関しているとする
+
+$$
+\mathrm{E}[X_i\epsilon_i]=\mathrm{Cov}(X_i\epsilon_i) \not= 0 
+$$ {#eq-7-5}
+
+この時，$X_i$は内生性(endogeneity)を持つ内生変数と言います。この時 @eq-7-4 において，$\mathrm{Cov}(X_i\epsilon_i)$が消えないので
+
+$$
+\begin{split}
+\beta_1 + \frac{\mathrm{Cov}(X_i\epsilon_i)}{\mathrm{Var}(X_i)}
+&=\frac{\mathrm{Cov}(X_iY_i) }{\mathrm{Var}(X_i)} 
+\end{split}
+$$
+
+となり，$\mathrm{Cov}(X_i\epsilon_i) / \mathrm{Var}(X_i)$分推定値がズレる（バイアスがかかる）ことになります。
+
+```{r}
+n <- 200 # <1>
+e <- rnorm(n) # <2>
+X <- (1 + 0.4*e) *　runif(n) # <3>
+b0 <- 1 # <4>
+b1 <- 2 # <5>
+Y <- b0 + X * b1 + e # <6>
+```
+
+1.  サンプルサイズ200
+2.  誤差項。標準正規分布$\mathrm{N}(0,1)$に従う変数を`n`個作成
+3.  説明変数X。誤差項eと相関するように作られている。`runif()` は，\[0,1\]の一様分布を作成する関数。
+4.  真の切片は1
+5.  真の係数は2
+6.  YはXの単回帰分析の結果となるように設定。
+
+これらを使って回帰分析を行う
+
+```{r}
+lm(Y~X) |>
+  summary()
+```
+
+切片の値は真の値1より小さく，計数の値は真の値2より大きく誤推定されている。これは，説明変数と誤差項の相関が引き起こしていて，それらの相関が正だから計数がより大きく推定されている。
+
+## 内生変数の生じる理由
+
+### 欠落変数
+
+もし，真のモデルが
+
+$$
+Y_i= \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \epsilon_i 
+$$ {#eq-7-6}
+
+で，$X_1$と$X_2$がともに共に誤差項と相関しないとします。この場合，重回帰分析を行うことで，$X_1$と$X_2$が$Y_i$に与える影響を正しく推定できます。
+
+ここで，$X_2$が得られない場合を考えます。推定に使えるのは$X_1$だけなので
+
+$$
+Y_i= \gamma_0 + \gamma_1 X_i + \eta_i 
+$$ {#eq-7-7}
+
+を推定することになります。この際には，
+
+$$
+E(\gamma_1)=\beta_1+\beta_2\frac{\mathrm{Cov}({X_1X_2})}{\mathrm{Var}({X_1})}
+$$ {#eq-7-8}
+
+となり，$\beta_2\mathrm{Cov}({X_1X_2})/\mathrm{Var}({X_1})$分のバイアスがかかります。このバイアスは，$\mathrm{Cov}({X_1X_2})=0$でない限り存在します[^ch7-1]。これは，疑似相関の際に起こるバイアスを表しています。
+
+![](images/Untitled%203-01.png){fig-align="center"}
+
+![](images/Untitled%204-01.png){fig-align="center"}
+
+### 測定誤差
+
+社会調査で多く用いられる「アンケート調査」のデータは，本来測定したいものを正確に測定できていない可能性があります（アンケート調査に適当に回答した経験はありませんか？）
+
+もし，測定したいものの測定に誤差があった場合，本来は， @eq-7-1 式
+
+$$
+Y_i= \beta_0 + \beta_1 X_i + \epsilon_i 
+$$
+
+を検証したいのに，Xが誤差のあるWでしか測定しかできないとします。
+
+$$
+W_i = X_i + u_i
+$$
+
+そうすると， @eq-7-1 式は
+
+$$
+Y_i= \beta_0 + \beta_1 W_i + \eta_i 
+$$ {#eq-7-9}
+
+となります。ここで，
+
+$$
+\eta_i = \epsilon_i - \beta_1u_i
+$$
+
+となります。$u_i$の期待値は0で$X_i,\epsilon_i$と独立と仮定します。外生性の条件である$\mathrm{E}[W_i\eta_i]$は
+
+$$
+\begin{split}
+\mathrm{E}[W_i\eta_i] &= \mathrm{E}[W_i(\epsilon_i - \beta_1u_i)] \\
+&=  \mathrm{E}[W_i\epsilon_i] - \beta_1 \mathrm{E}[W_iu_i] \\
+&=\mathrm{E}[(X_i+u_i) \epsilon_i] - \beta_1 \mathrm{E}[(X_i+u_i)u_i] \\
+&= - \beta_1 \mathrm{Var}(u_i) 
+\end{split}
+$$
+
+となるので，$\beta_1 \not= 0$である限り0ではない，つまり外生性が満たされなくなります。
+
+実際，$\beta_1$ の推定値は，
+
+$$
+\frac{\mathrm{Cov}(W_iY_i)}{\mathrm{Var}(W_i)}= \beta_1 \left( \frac{\mathrm{Var}(X_i)}{\mathrm{Var}(X_i) + \mathrm{Var}(u_i)} \right)
+$$
+
+となります。
+
+$$
+0<\left( \frac{\mathrm{Var}(X_i)}{\mathrm{Var}(X_i) + \mathrm{Var}(u_i)} \right)<1
+$$
+
+なので，$\beta_1 > 0$の時
+
+$$
+\beta_1 > \beta_1\left( \frac{\mathrm{Var}(X_i)}{\mathrm{Var}(X_i) + \mathrm{Var}(u_i)} \right)>0
+$$
+
+となるため，$\beta_1$は過小推定されます。この推定のずれは，$\mathrm{Var}(u_i)$が大きければ大きいほど強くなります（より過小に推定されます）。
+
+```{r}
+n <- 200 
+e <- rnorm(n) # <1>
+X <- rnorm(n) 
+u <- runif(n,-1,1) # <2>
+W <- X + u
+b0 <- 1
+b1 <- 2
+Y <- b0 + X * b1 +e # <3>
+```
+
+1.  誤差項
+2.  測定誤差 \[-1,1\]の値をとる一様分布に従う期待値0の値
+3.  YとXの関係
+
+```{r}
+lm(Y~W)|>
+  summary()
+```
+
+真の関係よりも過小に評価されるはずです。
+
+### 同時性
+
+同時性は，従属変数と独立変数が，相互に依存している場合に起きます。
+
+ある地域の警察官と犯罪件数との関係です。
+
+地域$i$の警察官の数を$X_i$，犯罪件数を$Y_i$とします。警察官の数を増やすと犯罪件数がどの程度減少するかを調べるならば， @eq-7-1 のように，YをXに回帰すれば良さそうです。しかし，警察官を配置すると犯罪は減少しそうですが，犯罪が多い地域に重点的に配置されそうです。つまり
+
+$$
+\left\{ \,
+    \begin{aligned}
+    & Y_i = \beta_0 + \beta_1 X_i + \epsilon_i \\
+    & X_i = \gamma_0 + \gamma_1 Y_i + u_i
+    \end{aligned}
+\right.
+$$ {#eq-7-10}
+
+ただし，$\epsilon_i, u_i$は相関しないものとします。ここで，上の式の外生性を確認すると
+
+$$
+\begin{split}
+\mathrm{E}[X_i\epsilon_i] &= \mathrm{E}[ (\gamma_0 + \gamma_1 X_i + u_i)\epsilon_i]  \\
+&=\mathrm{E}[Y_i\epsilon_i]\gamma_1
+\end{split}
+$$
+
+となり$\gamma_1 \not=0$となる限り0にはならず外生性は満たされません。
+
+## 内生性を見抜くためには？
+
+内生性を，データ分析の結果だけから見抜くことは無理（内生性の検定はあるけれど...）
+
+それよりも重要なのは分析対象の知識。データだけを見て（分析対象の知識がないまま）うまく分析することはできない。
+
+## 内生性の強さとバイアスの大きさ
+
+```{r}
+n <- 200 
+b0 <- 1
+b1 <- 2
+Estimate <- \(lambda){
+  e <- rnorm(n) # <1>
+  X <- (1 + lambda * e ) * runif(n)
+  Y <- b0 + X * b1 + e
+  lm(Y~X)$coefficient
+}
+
+
+simulate <- \(lambda){
+  estimates <- matrix(0,100,2)
+  for(i in 1:100) estimates[i, ] <-Estimate(lambda)
+  colMeans(estimates)
+}
+
+lambdas <-(0:60) / 100
+results <- mapply(simulate, lambdas)
+
+bias0 <-results[1, ] -b0
+bias1 <-results[2, ] -b1
+
+#par(family= 'Hiragino Sans')
+#plot(lambdas, bias0, xlab='λ', ylab = 'バイアス')
+#plot(lambdas, bias1, xlab='λ', ylab = 'バイアス')
+
+
+a <- tibble(lambdas,bias0,bias1)
+ggplot(a,
+       aes(x = lambdas,
+           y = bias0)
+       ) + 
+  geom_point()+
+  theme(text = element_text(family = 'Hiragino Sans')) +
+  labs(title= "切片のバイアス",
+       x = 'λ',
+       y = 'バイアス')
+
+ggplot(a,
+       aes(x = lambdas,
+           y = bias1)
+       ) + 
+  geom_point()+
+  theme(text = element_text(family = 'Hiragino Sans')) +
+  labs(title= "係数のバイアス",
+       x = 'λ',
+       y = 'バイアス')
+  
+
+```
+
+[^ch7-1]: 推定するモデル @eq-7-7 に，正しいモデルを代入すると，
+
+    $$
+    \begin{split}\hat\gamma_1&=\frac{S_{X_1Y}}{S_{X_1X_1}} = \frac{\sum (X_{1i}-\bar X_{1})(Y_i-\bar Y)}{ \sum (X_{1i}-\bar X_1)^2}\\&=\sum w_{X_{1i}}Y_i \\&=\sum w_{X_{1i}}(\beta_0+\beta_1X_{1i}+\beta_2X_{2i}+\epsilon_i)\\&=\beta_1+\beta_2\frac{S_{X_1X_2}}{S_{X_1X_1}}+\sum w_{X_{1i}}\epsilon_i\end{split}
+    $$
+
+    これの期待値を取ると，上の式 @eq-7-8 になります。ただし，
+
+    -   $S_{X_{1}Y} = \mathrm{Cov}(X_{1i}Y_i)=\sum (X_{1i}-\bar X)(Y_i-\bar Y)$
+    -   $S_{X_iX_i} = \mathrm{Var}(X_1) = \sum (X_{1i}-\bar X)^2$
+    -   $w_{X_{1i}}=({X_{1i} - \bar X) / \sum(X_{1i}- \bar X)}$
