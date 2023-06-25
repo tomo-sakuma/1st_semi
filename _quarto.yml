@@ -19,6 +19,7 @@ book:
     - ch5.qmd
     - ch6.qmd
     - ch7.qmd
+    - 2023-06-27.qmd
     - references.qmd
 
 bibliography: references.bib
@@ -35,7 +36,7 @@ format:
     logo: kobe.png
     embed-resources: true
     df-print: paged
-    code-annotations: below
+    code-annotations: hover
     code-tools:
       source: false
       toggle: false

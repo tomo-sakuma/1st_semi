@@ -27,6 +27,34 @@
             "title": "Literate programming",
             "type": "article-journal",
             "volume": "27"
+        },
+        {
+            "DOI": "10.1016/j.aos.2011.02.002",
+            "URL": "http://linkinghub.elsevier.com/retrieve/pii/S0361368211000055",
+            "author": [
+                {
+                    "family": "Adler",
+                    "given": "Paul S"
+                },
+                {
+                    "family": "Chen",
+                    "given": "Clara Xiaoling"
+                }
+            ],
+            "container-title": "Accounting, Organizations and Society",
+            "id": "adler2011",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "page": "6385",
+            "title": "Combining creativity and control: Understanding individual motivation in large-scale collaborative creativity",
+            "title-short": "Combining creativity and control",
+            "type": "article-journal",
+            "volume": "36"
         }
     ],
     "project_biblios": [

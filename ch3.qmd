@@ -1,5 +1,5 @@
 ---
-title: "統計3章"
+title: "ch3"
 toc: true
 format:
   html:
@@ -16,7 +16,6 @@ format:
 editor: visual
 ---
 
-
 ## 準備：パッケージのロード
 
 ```{r}
@@ -25,11 +24,15 @@ editor: visual
 #| output	: false
 #| echo: true
 
-rm(list=ls()); gc();  gc(); #前の作業など，rのメモリに入っているものをリセットするコマンド
-if (!require("pacman")) install.packages("pacman") #パッケージ管理用のパッケージであるpacmanが入っていない場合はインストール
-pacman::p_load(tidyverse, magrittr) 
+rm(list=ls()); gc();  gc(); # <1> 
+if (!require("pacman")) install.packages("pacman") # <2>
+pacman::p_load(tidyverse, magrittr) # <3>
 
 ```
+
+1.  前の作業など，rのメモリに入っているものをリセットするコマンド
+2.  パッケージ管理用のパッケージである`pacman`が入っていない場合はインストール
+3.  必要なパッケージを読み込み
 
 ## 問題3.1
 
