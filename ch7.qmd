@@ -151,6 +151,18 @@ $$ {#eq-7-8}
 
 となり，$\beta_2\mathrm{Cov}({X_1X_2})/\mathrm{Var}({X_1})$分のバイアスがかかります。このバイアスは，$\mathrm{Cov}({X_1X_2})=0$でない限り存在します[^ch7-1]。これは，疑似相関の際に起こるバイアスを表しています。
 
+[^ch7-1]: 推定するモデル @eq-7-7 に，正しいモデルを代入すると，
+
+    $$
+    \begin{split}\hat\gamma_1&=\frac{S_{X_1Y}}{S_{X_1X_1}} = \frac{\sum (X_{1i}-\bar X_{1})(Y_i-\bar Y)}{ \sum (X_{1i}-\bar X_1)^2}\\&=\sum w_{X_{1i}}Y_i \\&=\sum w_{X_{1i}}(\beta_0+\beta_1X_{1i}+\beta_2X_{2i}+\epsilon_i)\\&=\beta_1+\beta_2\frac{S_{X_1X_2}}{S_{X_1X_1}}+\sum w_{X_{1i}}\epsilon_i\end{split}
+    $$
+
+    これの期待値を取ると，上の式 @eq-7-8 になります。ただし，
+
+    -   $S_{X_{1}Y} = \mathrm{Cov}(X_{1i}Y_i)=\sum (X_{1i}-\bar X)(Y_i-\bar Y)$
+    -   $S_{X_iX_i} = \mathrm{Var}(X_1) = \sum (X_{1i}-\bar X)^2$
+    -   $w_{X_{1i}}=({X_{1i} - \bar X) / \sum(X_{1i}- \bar X)}$
+
 ![](images/Untitled%203-01.png){fig-align="center"}
 
 ![](images/Untitled%204-01.png){fig-align="center"}
@@ -326,15 +338,3 @@ ggplot(a,
   
 
 ```
-
-[^ch7-1]: 推定するモデル @eq-7-7 に，正しいモデルを代入すると，
-
-    $$
-    \begin{split}\hat\gamma_1&=\frac{S_{X_1Y}}{S_{X_1X_1}} = \frac{\sum (X_{1i}-\bar X_{1})(Y_i-\bar Y)}{ \sum (X_{1i}-\bar X_1)^2}\\&=\sum w_{X_{1i}}Y_i \\&=\sum w_{X_{1i}}(\beta_0+\beta_1X_{1i}+\beta_2X_{2i}+\epsilon_i)\\&=\beta_1+\beta_2\frac{S_{X_1X_2}}{S_{X_1X_1}}+\sum w_{X_{1i}}\epsilon_i\end{split}
-    $$
-
-    これの期待値を取ると，上の式 @eq-7-8 になります。ただし，
-
-    -   $S_{X_{1}Y} = \mathrm{Cov}(X_{1i}Y_i)=\sum (X_{1i}-\bar X)(Y_i-\bar Y)$
-    -   $S_{X_iX_i} = \mathrm{Var}(X_1) = \sum (X_{1i}-\bar X)^2$
-    -   $w_{X_{1i}}=({X_{1i} - \bar X) / \sum(X_{1i}- \bar X)}$
